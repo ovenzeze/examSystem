@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>学员管理</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/ionicons.min.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+    <link rel="stylesheet" type="text/css" href="css/student-manage.css" />
+</head>
+<body class="row">
+
+<!-- left area -->
+   <div class="left col-md-2">
+        <aside>
+            <div class="welcome t-c">
+                <strong>新卓越在线考试管理系统</strong>
+            </div>
+            <ul class="f-16">
+                <li>
+                    <a href="exam-summary.html"><i class="icon ion-navicon-round f-18 m-r-10"></i>  考试概况</a>
+                    <span class="icon ion-ios-arrow-back f-r f-18"></span>
+                </li>
+                <li>
+                    <a href="student-manage.html"><i class="icon ion-person-stalker f-18 m-r-10"></i> 学员管理</a>
+                    <span class="icon ion-ios-arrow-back f-r f-18"></span>
+                </li>
+                <li id="course">
+                    <a href="lesson-info.html"><i class="icon ion-ios-list-outline f-18 m-r-10"></i>  课程管理</a>
+                    <span class="icon ion-ios-arrow-back f-r f-18"></span>
+                </li>
+                <li class="course child-menu">
+                    <a href="lesson-info.html"><i class="icon ion-ios-arrow-forward f-18 m-r-10"></i>  课程信息</a>
+                    <span class="icon ion-ios-arrow-back f-r f-18"></span>
+                </li>
+                <li class="course child-menu">
+                    <a href="subject-library.html"><i class="icon ion-ios-arrow-forward f-18 m-r-10"></i>  题库管理</a>
+                    <span class="icon ion-ios-arrow-back f-r f-18"></span>
+                </li>
+                <li id="assessment">
+                    <a href="exam-manage.html"><i class="icon ion-android-done-all f-18 m-r-10"></i>考核管理</a>
+                    <span class="icon ion-ios-arrow-back f-r f-18"></span>
+                </li>
+                <li class="assessment child-menu">
+                    <a href="exam-manage.html"><i class="icon ion-ios-arrow-forward f-18 m-r-10"></i>  考试管理</a>
+                    <span class="icon ion-ios-arrow-back f-r f-18"></span>
+                </li>
+                <li class="assessment child-menu">
+                    <a href="member-manage.html"><i class="icon ion-ios-arrow-forward f-18 m-r-10"></i>  成员管理</a>
+                    <span class="icon ion-ios-arrow-back f-r f-18"></span>
+                </li>
+                <li id="grade">
+                    <a href="exam-grade.html"><i class="icon ion-calculator f-18 m-r-10"></i>  成绩管理</a>
+                    <span class="icon ion-ios-arrow-back f-r f-18"></span>
+                </li>
+                <li class="grade child-menu">
+                    <a href="exam-grade.html"><i class="icon ion-ios-arrow-forward f-18 m-r-10"></i>  考试成绩</a>
+                    <span class="icon ion-ios-arrow-back f-r f-18"></span>
+                </li>
+                <li class="grade child-menu">
+                    <a href="grade-details.html"><i class="icon ion-ios-arrow-forward f-18 m-r-10"></i>  成绩明细</a>
+                    <span class="icon ion-ios-arrow-back f-r f-18"></span>
+                </li>
+                <li>
+                    <a href="super-manage.html"><i class="icon ion-ios-locked-outline f-18 m-r-10"></i>  超级管理</a>
+                    <span class="icon ion-ios-arrow-back f-r f-18"></span>
+                </li>
+            </ul>
+        </aside>
+    </div>
+<!-- left area end -->
+
+<!-- right area -->
+<div class="right col-md-10 f-r">
+    <header>
+        <span class="notice-body"><i class="icon ion-alert"></i>  公告：</span><span id="notice">2016新卓越秋季软师报名进行中！</span>
+        <span id="userName" class="m-r-10">上午好,卓小越  <a href="##">  退出</a></span>
+    </header>
+    <main>
+    	<div class="heading clearfix">
+        	<h4 class="f-l">学员管理 <small>查看和管理学员</small></h4>
+        	<ol class="breadcrumb f-r">
+            	<li class="active">搜索和管理学员</li>
+        	</ol>
+    	</div>
+     	<div class="fliter row ">
+			<div class="col-md-5">
+    			<span>条件筛选：</span>
+    				<button type="button" class="btn btn-default dropdown-toggle" id="btn1" data-toggle="dropdown">
+        -------  <span id="span1">请选择课程</span>  ------- <span class="caret"></span>
+    				</button>
+				    <div class="row bgc-white fliter-box" id="fliterBox">
+				        <div class="year col-md-4" id="fliterListNav">
+				        <ul>
+				        <li class="list-item nav-actived">最近</li>
+				        <li class="list-item">2017</li>
+				        <li class="list-item">2016</li>
+				        <li class="list-item">2015</li>
+				        <li class="list-item">2014</li>
+				        </ul>
+				        </div>
+				        <div class="subject col-md-8" id="fliterList">
+				            <ul>
+				            <li class="list-item">1601软师</li>
+				            <li class="list-item">1602软师</li>
+				            <li class="list-item">1601程序员</li>
+				            <li class="list-item">1602程序员</li>
+				            <li class="list-item">1601前端</li>
+				            <li class="list-item">1602前端</li>
+				            </ul>
+				        </div>
+				    </div>
+			</div>
+
+        <div class="input-group col-md-4 col-md-offset-8">
+            <input type="text" class="form-control" placeholder="请输入学号/姓名/课程">
+            <span class="input-group-btn">
+       			 <button class="btn btn-default" type="button">搜索</button>
+      		</span>
+        </div>
+    </div>
+      
+        <!--学员管理界面-->
+         
+       
+        	<table class="table table-hover m-t-20" id="tableUser">
+               <!-- On cells (`td` or `th`) -->
+               <thead id="userThead">
+                <tr class="active">
+                 <td class="checkbox m-0"><label><input type="checkbox" name="a" id="btn"></label></td>
+                  <td>学号</td>
+                  <td>姓名</td>
+                  <td>专业</td>
+                  <td>参加课程</td>
+                  <td>课程状态</td>
+                  <td><a href="#" id="addUser1">添加</a>/<a href="#" id="deleteAll">删除</a></td>
+                </tr>
+                </thead>
+             	<tbody id="userTbody">
+                <tr class="info">
+             	<td class="checkbox m-0"><label><input type="checkbox" name="a"></label></td>
+                  <td>06144134</td>
+                  <td>卓小越</td>
+                  <td>通信工程</td>
+                  <td>软件工程师</td>
+                  <td>已完成</td>
+                  <td><a href="#" class="changeInfrom">修改</a>/<a href="#" class="deleteOne">删除</a></td>
+                </tr>
+                <tr class="warning">
+                 <td class="checkbox m-0"><label><input type="checkbox" name="a"></label></td>
+                  <td>06144134</td>
+                  <td>卓小越</td>
+                  <td>通信工程</td>
+                  <td>程序员</td>
+                  <td>已完成</td>
+                  <td><a href="#" class="changeInfrom">修改</a>/<a href="#" class="deleteOne">删除</a></td>
+                </tr>
+                <tr class="sucess">
+             	<td class="checkbox m-0"><label><input type="checkbox" name="a"></label></td>
+                  <td>06144134</td>
+                  <td>卓小越</td>
+                  <td>通信工程</td>
+                  <td>程序员</td>
+                  <td>未完成</td>
+                  <td><a href="#" class="changeInfrom">修改</a>/<a href="#" class="deleteOne">删除</a></td>
+                </tr>
+                <tr class="active">
+             	<td class="checkbox m-0"><label><input type="checkbox" name="a"></label></td>
+                  <td>06144134</td>
+                  <td>卓小越</td>
+                  <td>通信工程</td>
+                  <td>程序员</td>
+                  <td>已完成</td>
+                  <td><a href="#" class="changeInfrom">修改</a>/<a href="#" class="deleteOne">删除</a></td>
+                </tr>
+                <tr class="info">
+             	<td class="checkbox m-0"><label><input type="checkbox" name="a"></label></td>
+                  <td>06144134</td>
+                  <td>卓小越</td>
+                  <td>通信工程</td>
+                  <td>程序员</td>
+                  <td>已完成</td>
+                  <td><a href="#" class="changeInfrom">修改</a>/<a href="#" class="deleteOne">删除</a></td>
+                </tr>
+                <tr class="warning">
+             	<td class="checkbox m-0"><label><input type="checkbox" name="a"></label></td>
+                  <td>06144134</td>
+                  <td>卓小越</td>
+                  <td>通信工程</td>
+                  <td>程序员</td>
+                  <td>已完成</td>
+                  <td><a href="#" class="changeInfrom">修改</a>/<a href="#" class="deleteOne">删除</a></td>
+                </tr>
+                <tr class="success">
+             	<td class="checkbox m-0"><label><input type="checkbox" name="a"></label></td>
+                  <td>06144134</td>
+                  <td>卓小越</td>
+                  <td>通信工程</td>
+                  <td>程序员</td>
+                  <td>已完成</td>
+                  <td><a href="#" class="changeInfrom">修改</a>/<a href="#" class="deleteOne">删除</a></td>
+                </tr>
+                <tr class="active">
+             	<td class="checkbox m-0"><label><input type="checkbox" name="a"></label></td>
+                  <td>06144134</td>
+                  <td>卓小越</td>
+                  <td>通信工程</td>
+                  <td>程序员</td>
+                  <td>已完成</td>
+                  <td><a href="#" class="changeInfrom">修改</a>/<a href="#" class="deleteOne">删除</a></td>
+                </tr>
+                <tr class="info">
+             	<td class="checkbox m-0"><label><input type="checkbox" name="a"></label></td>
+                  <td>06144134</td>
+                  <td>卓小越</td>
+                  <td>通信工程</td>
+                  <td>程序员</td>
+                  <td>已完成</td>
+                  <td><a href="#" class="changeInfrom">修改</a>/<a href="#" class="deleteOne">删除</a></td>
+                </tr>
+               </tbody>
+			</table>
+        	<nav class="block">
+            <ul class="pagination" id="pagination">
+                <li><a href="#">&laquo;</a></li>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">&raquo;</a></li>
+            </ul>
+        </nav>
+        
+        <div id="zz" class="zz"></div>
+        <div id="addUser" class="add-user">
+        	<div class="add-header">
+        		<span>修改/添加学员信息</span>
+        		<input type="button" id="addClose" value="关闭" >
+        	</div>
+        	<div class="editor">
+				<form class="form-horizontal" role="form">
+					  <div class="form-group">
+					    <label for="inputEmail3" class="col-md-4 control-label">学号</label>
+					    <div class="col-sm-8">
+					      <input type="text" class="form-control" id="inputNum" value="06144134">
+					    </div>
+					  </div>
+					  <div class="form-group">
+					    <label for="inputPassword3" class="col-md-4 control-label">姓名</label>
+					    <div class="col-sm-8">
+					      <input type="text" class="form-control" id="inputName" value="卓小越">
+					    </div>
+					  </div>
+					   <div class="form-group">
+					    <label for="inputPassword3" class="col-md-4 control-label">已有课程</label>
+					    <div class="col-sm-8">
+							<select class="form-control" id="inputCourse">
+								  <option>软件工程师</option>
+								  <option>程序员</option>
+								  <option>前端工程师</option>
+							</select>
+						</div>
+					   </div>
+					  <div class="form-group">
+					    <label for="inputPassword3" class="col-md-4 control-label">专业</label>
+					    <div class="col-sm-8">
+					      <input type="text" class="form-control" id="inputClass" value="通信工程">
+					    </div>
+					  </div>
+					  <div class="form-group">
+					    <label for="inputPassword3" class="col-md-4 control-label">课程状态</label>
+					    <div class="col-sm-8">
+							<select class="form-control" id="classState">
+								  <option>未开始</option>
+								  <option>进行中</option>
+								  <option>已完成</option>
+							</select>
+						</div>
+					   </div>
+					  <div class="form-group">
+					    <label for="inputPassword3" class="col-md-4 control-label">添加课程</label>
+					    <div class="col-sm-8">
+							<select class="form-control">
+								  <option>JAVA</option>
+								  <option>运营与维护</option>
+								  <option>C语言</option>
+							</select>
+						</div>
+					   </div>
+					  <div class="form-group form-button-user row">
+					      <button type="submit" class="btn btn-default col-md-4 col-md-offset-2 m-r-20" id="addUserInform">确定</button>
+					      <button type="button" class="btn btn-default col-md-4" id="cancelChange">取消</button>
+					  </div>
+			    </form>
+        	</div>
+        </div>
+    </main>
+    <footer>
+    	<strong class="m-l-20">Copyright © 2016 <a href="http://thoughtcoding.csxupt.com">新卓越计算机教育</a>.</strong> All rights reserved.
+    </footer>
+<!-- right area end -->
+</div>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/student-manage.js"></script>
+
+<script type="text/javascript" src="js/member-manage.js"></script>
+
+
+</body>
+</html>

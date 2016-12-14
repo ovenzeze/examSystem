@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>后台管理模板页</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/ionicons.min.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+    <link rel="stylesheet" type="text/css" href="css/grade-details.css">
+</head>
+<body class="row">
+
+<!-- left area -->
+   <div class="left col-md-2">
+        <aside>
+            <div class="welcome t-c">
+                <strong>新卓越在线考试管理系统</strong>
+            </div>
+            <ul class="f-16">
+                <li>
+                    <a href="exam-summary.html"><i class="icon ion-navicon-round f-18 m-r-10"></i>  考试概况</a>
+                    <span class="icon ion-ios-arrow-back f-r f-18"></span>
+                </li>
+                <li>
+                    <a href="student-manage.html"><i class="icon ion-person-stalker f-18 m-r-10"></i> 学员管理</a>
+                    <span class="icon ion-ios-arrow-back f-r f-18"></span>
+                </li>
+                <li id="course">
+                    <a href="lesson-info.html"><i class="icon ion-ios-list-outline f-18 m-r-10"></i>  课程管理</a>
+                    <span class="icon ion-ios-arrow-back f-r f-18"></span>
+                </li>
+                <li class="course child-menu">
+                    <a href="lesson-info.html"><i class="icon ion-ios-arrow-forward f-18 m-r-10"></i>  课程信息</a>
+                    <span class="icon ion-ios-arrow-back f-r f-18"></span>
+                </li>
+                <li class="course child-menu">
+                    <a href="subject-library.html"><i class="icon ion-ios-arrow-forward f-18 m-r-10"></i>  题库管理</a>
+                    <span class="icon ion-ios-arrow-back f-r f-18"></span>
+                </li>
+                <li id="assessment">
+                    <a href="exam-manage.html"><i class="icon ion-android-done-all f-18 m-r-10"></i>考核管理</a>
+                    <span class="icon ion-ios-arrow-back f-r f-18"></span>
+                </li>
+                <li class="assessment child-menu">
+                    <a href="exam-manage.html"><i class="icon ion-ios-arrow-forward f-18 m-r-10"></i>  考试管理</a>
+                    <span class="icon ion-ios-arrow-back f-r f-18"></span>
+                </li>
+                <li class="assessment child-menu">
+                    <a href="member-manage.html"><i class="icon ion-ios-arrow-forward f-18 m-r-10"></i>  成员管理</a>
+                    <span class="icon ion-ios-arrow-back f-r f-18"></span>
+                </li>
+                <li id="grade">
+                    <a href="exam-grade.html"><i class="icon ion-calculator f-18 m-r-10"></i>  成绩管理</a>
+                    <span class="icon ion-ios-arrow-back f-r f-18"></span>
+                </li>
+                <li class="grade child-menu">
+                    <a href="exam-grade.html"><i class="icon ion-ios-arrow-forward f-18 m-r-10"></i>  考试成绩</a>
+                    <span class="icon ion-ios-arrow-back f-r f-18"></span>
+                </li>
+                <li class="grade child-menu">
+                    <a href="grade-details.html"><i class="icon ion-ios-arrow-forward f-18 m-r-10"></i>  成绩明细</a>
+                    <span class="icon ion-ios-arrow-back f-r f-18"></span>
+                </li>
+                <li>
+                    <a href="super-manage.html"><i class="icon ion-ios-locked-outline f-18 m-r-10"></i>  超级管理</a>
+                    <span class="icon ion-ios-arrow-back f-r f-18"></span>
+                </li>
+            </ul>
+        </aside>
+    </div>
+<!-- left area end -->
+
+<!-- right area -->
+<div class="right col-md-10 f-r">
+    <header>
+        <span class="notice-body"><i class="icon ion-alert"></i>  公告：</span><span id="notice">2016新卓越秋季软师报名进行中！</span>
+        <span id="userName" class="m-r-10">上午好,卓小越  <a href="##">  退出</a></span>
+    </header>
+    <main>
+    	<div class="heading clearfix">
+	        <h4 class="f-l">考试成绩 <small>增删改查成绩</small></h4>
+	        <ol class="breadcrumb f-r">
+	            <li><a href="exam-summary">考试概况</a></li>
+	            <li><a href="grade-details">成绩管理</a></li>
+	            <li class="active">考试成绩</li>
+	        </ol>
+	    </div>
+	    <!-- top：sreach-infors and operations -->
+    	<div class="opr  m-c clearfix">
+    		<!--  search infors  -->
+    		<div class="col-md-2 m-r-10"> <!-- f-l m-l-10 m-r-10 l-h-35-->
+    			<span class="f-l">姓名：</span><input type="text" id="name" class="f-r">
+    		</div>
+    		<div class="col-md-2 m-r-10"> <!--f-l m-r-10-->
+    			<span class="f-l">考试名称：</span>
+	    		<select class="f-l selectExam" id="selectExam-1">
+	    			<option value ="000"></option>
+					<option value ="exam1">计算机基础考试</option>
+					<option value ="exam2">程序员水平测试</option>
+					<option value="exam3">软件工程师考试</option>
+				</select>
+			</div>
+    		<div class="col-md-2 m-r-10">  <!--f-l m-r-10 l-h-35-->
+    			<span class="f-l">学号：</span>
+    			<input type="text" id="Id" class="f-r">
+    		</div>
+    		<input type="button" value="搜索" id='search' class="btn-primary col-md-1 m-l-10" ><!--btn btn-primary col-md-1-->
+    		<input type="button" value="导入成绩" id="gradeIn" class="btn-primary btn-grade col-md-2 f-r m-l-10" /><!--btn btn-primary btn-grade col-md-2-->
+    		<input type="button" value="导出成绩" id='gradeOut' class="btn-primary btn-grade col-md-2 f-r m-l-10" />
+    		<!--   operations   -->
+    	</div>
+    	
+    	<!--grade-table-->
+    	<div class="grade-table  clearfix m-t-30">
+    		<table id="table1" class="table table-hover table-bordered m-t-20" contenteditable="false" border="1" bordercolor="#000000" width="100%" cellpadding="0" cellspacing="0" align="center";>
+				<tbody>
+			    	<tr>
+			    		<th>学号</th>
+			        	<th>姓名</th>
+			            <th>成绩</th>
+			            <th>考试名称</th>
+			            <th></th>
+			            <th></th>
+			        </tr>
+			        <tr>
+			        	<td>06143098</td>
+			        	<td>卓小月</td>
+                        <td>54</td>
+                        <td>计算机基础考试</td>
+			        </tr>
+			         <tr>
+			         	<td>06143097</td>
+			        	<td>贾西贝</td>
+			            <td>65</td>
+			            <td>程序员水平测试</td>
+			        </tr>
+			         <tr>
+			         	<td>06143099</td>
+			        	<td>小名</td>
+			            <td>74</td>
+			            <td>软件工程师考试</td>
+			        </tr>
+			        <tr>
+			        	<td>06143098</td>
+			        	<td>卓小月</td>
+                        <td>54</td>
+                        <td>计算机基础考试</td>
+			        </tr>
+			         <tr>
+			         	<td>06143097</td>
+			        	<td>贾西贝</td>
+			            <td>65</td>
+			            <td>程序员水平测试</td>
+			        </tr>
+			         <tr>
+			         	<td>06143099</td>
+			        	<td>小名</td>
+			            <td>74</td>
+			            <td>软件工程师考试</td>
+			        </tr>
+			        <tr>
+			        	<td>06143098</td>
+			        	<td>卓小月</td>
+                        <td>54</td>
+                        <td>计算机基础考试</td>
+			        </tr>
+			         <tr>
+			         	<td>06143097</td>
+			        	<td>贾西贝</td>
+			            <td>65</td>
+			            <td>程序员水平测试</td>
+			        </tr>
+			         <tr>
+			         	<td>06143099</td>
+			        	<td>小名</td>
+			            <td>74</td>
+			            <td>软件工程师考试</td>
+			        </tr>
+			        <tr>
+			        	<td>06143098</td>
+			        	<td>卓小月</td>
+                        <td>54</td>
+                        <td>计算机基础考试</td>
+			        </tr>
+			         <tr>
+			         	<td>06143097</td>
+			        	<td>贾西贝</td>
+			            <td>65</td>
+			            <td>程序员水平测试</td>
+			        </tr>
+			         <tr>
+			         	<td>06143099</td>
+			        	<td>小名</td>
+			            <td>74</td>
+			            <td>软件工程师考试</td>
+			        </tr>
+			        <tr>
+			        	<td>06143098</td>
+			        	<td>卓小月</td>
+                        <td>54</td>
+                        <td>计算机基础考试</td>
+			        </tr>
+			         <tr>
+			         	<td>06143097</td>
+			        	<td>贾西贝</td>
+			            <td>65</td>
+			            <td>程序员水平测试</td>
+			        </tr>
+			         <tr>
+			         	<td>06143099</td>
+			        	<td>小名</td>
+			            <td>74</td>
+			            <td>软件工程师考试</td>
+			        </tr>
+			        <tr>
+			        	<td>06143098</td>
+			        	<td>卓小月</td>
+                        <td>54</td>
+                        <td>计算机基础考试</td>
+			        </tr>
+			         <tr>
+			         	<td>06143097</td>
+			        	<td>贾西贝</td>
+			            <td>65</td>
+			            <td>程序员水平测试</td>
+			        </tr>
+			         <tr>
+			         	<td>06143099</td>
+			        	<td>小名</td>
+			            <td>74</td>
+			            <td>软件工程师考试</td>
+			        </tr>
+			        <tr>
+			        	<td>06143098</td>
+			        	<td>卓小月</td>
+                        <td>54</td>
+                        <td>计算机基础考试</td>
+			        </tr>
+			         <tr>
+			         	<td>06143097</td>
+			        	<td>贾西贝</td>
+			            <td>65</td>
+			            <td>程序员水平测试</td>
+			        </tr>
+			         <tr>
+			         	<td>06143099</td>
+			        	<td>小名</td>
+			            <td>74</td>
+			            <td>软件工程师考试</td>
+			        </tr>
+			    </tbody>
+			</table>
+			<nav class="block">
+	            <ul class="pagination" id="page">
+	                <li><a href="#">&laquo;</a></li>
+	                <li><a href="#">1</a></li>
+	                <li><a href="#">2</a></li>
+	                <li><a href="#">3</a></li>
+	                <li><a href="#">4</a></li>
+	                <li><a href="#">5</a></li>
+	                <li><a href="#">&raquo;</a></li>
+	            </ul>
+	        </nav>
+        
+			<div id="box" class="clearfix">
+				<span>姓名：</span><input type="text" /><br />
+			    <span>成绩:</span><input type="text" /><br />
+			    <span>考试名称：</span><select class="selectExam" id='selectExam-2'>
+	    			<option value ="000"></option>
+					<option value ="exam1">计算机基础考试</option>
+					<option value ="exam2">程序员水平测试</option>
+					<option value="exam3">软件工程师考试</option>
+				</select><br />
+				<div class="btnBox">
+				 	<button value="取消" class="btn btn-primary f-l">取消</button>
+				    <button value="确认" class="btn btn-primary f-r">确认</button>
+			    </div>
+			</div>
+			<div id="mask"></div>
+    	</div>
+    </main>
+    <footer>
+    	<strong class="m-l-20">Copyright © 2016 <a href="http://thoughtcoding.csxupt.com">新卓越计算机教育</a>.</strong> All rights reserved.
+    </footer>
+<!-- right area end -->
+</div>
+<script type="text/javascript"src = "js/jquery.min.js"></script>
+<script type="text/javascript" src = "js/bootstrap.min.css"></script>
+<script type="text/javascript" src = "js/common.js"></script>
+<script type="text/javascript" src="js/grade-details.js"></script>
+</body>
+</html>

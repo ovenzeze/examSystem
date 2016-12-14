@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>后台管理模板页</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/ionicons.min.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+
+    <!--题库管理的css-->
+    <link rel="stylesheet" href="css/subject-library.css" type="text/css"/>
+    <link href="css/lib/bootstrap-datetimepicker.css" rel="stylesheet" media="screen">
+
+</head>
+<body class="row">
+
+<!-- left area -->
+   <div class="left col-md-2">
+        <aside>
+            <div class="welcome t-c">
+                <strong>新卓越在线考试管理系统</strong>
+            </div>
+            <ul class="f-16">
+                <li>
+                    <a href="exam-summary.html"><i class="icon ion-navicon-round f-18 m-r-10"></i>  考试概况</a>
+                    <span class="icon ion-ios-arrow-back f-r f-18"></span>
+                </li>
+                <li>
+                    <a href="student-manage.html"><i class="icon ion-person-stalker f-18 m-r-10"></i> 学员管理</a>
+                    <span class="icon ion-ios-arrow-back f-r f-18"></span>
+                </li>
+                <li id="course">
+                    <a href="lesson-info.html"><i class="icon ion-ios-list-outline f-18 m-r-10"></i>  课程管理</a>
+                    <span class="icon ion-ios-arrow-back f-r f-18"></span>
+                </li>
+                <li class="course child-menu">
+                    <a href="lesson-info.html"><i class="icon ion-ios-arrow-forward f-18 m-r-10"></i>  课程信息</a>
+                    <span class="icon ion-ios-arrow-back f-r f-18"></span>
+                </li>
+                <li class="course child-menu">
+                    <a href="subject-library.html"><i class="icon ion-ios-arrow-forward f-18 m-r-10"></i>  题库管理</a>
+                    <span class="icon ion-ios-arrow-back f-r f-18"></span>
+                </li>
+                <li id="assessment">
+                    <a href="exam-manage.html"><i class="icon ion-android-done-all f-18 m-r-10"></i>考核管理</a>
+                    <span class="icon ion-ios-arrow-back f-r f-18"></span>
+                </li>
+                <li class="assessment child-menu">
+                    <a href="exam-manage.html"><i class="icon ion-ios-arrow-forward f-18 m-r-10"></i>  考试管理</a>
+                    <span class="icon ion-ios-arrow-back f-r f-18"></span>
+                </li>
+                <li class="assessment child-menu">
+                    <a href="member-manage.html"><i class="icon ion-ios-arrow-forward f-18 m-r-10"></i>  成员管理</a>
+                    <span class="icon ion-ios-arrow-back f-r f-18"></span>
+                </li>
+                <li id="grade">
+                    <a href="exam-grade.html"><i class="icon ion-calculator f-18 m-r-10"></i>  成绩管理</a>
+                    <span class="icon ion-ios-arrow-back f-r f-18"></span>
+                </li>
+                <li class="grade child-menu">
+                    <a href="exam-grade.html"><i class="icon ion-ios-arrow-forward f-18 m-r-10"></i>  考试成绩</a>
+                    <span class="icon ion-ios-arrow-back f-r f-18"></span>
+                </li>
+                <li class="grade child-menu">
+                    <a href="grade-details.html"><i class="icon ion-ios-arrow-forward f-18 m-r-10"></i>  成绩明细</a>
+                    <span class="icon ion-ios-arrow-back f-r f-18"></span>
+                </li>
+                <li>
+                    <a href="super-manage.html"><i class="icon ion-ios-locked-outline f-18 m-r-10"></i>  超级管理</a>
+                    <span class="icon ion-ios-arrow-back f-r f-18"></span>
+                </li>
+            </ul>
+        </aside>
+    </div>
+<!-- left area end -->
+
+<!-- right area -->
+<div class="right col-md-10 f-r">
+    <header>
+        <span class="notice-body"><i class="icon ion-alert"></i>  公告：</span><span id="notice">2016新卓越秋季软师报名进行中！</span>
+        <span id="userName" class="m-r-10">上午好,卓小越  <a href="##">  退出</a></span>
+    </header>
+    <main>
+        <div id="top-nav" class="m-b-20">
+            <ul class="nav nav-tabs nav-justified">
+                <li><a href="#">课程管理</a></li>
+                <li class="active"><a href="#">题库管理</a></li>
+            </ul>
+        </div>
+        <div class="clearfix">
+            <form action="" class="form-horizontal clearfix col-md-4 top-p-l-0" role="form">
+                <label for="dtp_input2" class="col-md-4 control-label">选择课程：</label>
+                <div class="input-group col-lg-8 select-subject">
+                    <input id="type" type="text" class="form-control" value="">
+                    <div id="topic-select-type" class="input-group-btn">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">课程<span class="caret"></span></button>
+                        <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                            <li><a href="#">全部</a></li>
+                            <li><a href="#">软师</a></li>
+                            <li><a href="#">程序员</a></li>
+                            <li><a href="#">前端</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">java</a></li>
+                        </ul>
+                    </div><!-- /btn-group -->
+                </div><!-- /input-group -->
+            </form>
+
+            <form action="" class="form-horizontal col-md-4 top-p-l-0 top-p-l-15 top-p-r-15"  role="form">
+                <fieldset>
+                    <div class="form-group">
+                        <label for="dtp_input2" class="col-md-4 control-label">创建时间：</label>
+                        <div class="input-group date form_date col-md-8" data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+                            <input class="form-control" size="16" type="text" value="" readonly>
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                        </div>
+                        <input type="hidden" id="dtp_input2" value="" /><br/>
+                    </div>
+                </fieldset>
+            </form>
+            <button type="button" class="btn btn-default f-r m-r-10" id="topic-delete-btn">删除</button>
+            <button type="button" class="btn btn-default f-r m-r-10" id="topic-lead-btn">导入</button>
+            <button type="button" class="btn btn-default f-r m-r-10" id="topic-adda-btn">批量添加</button>
+            <button type="button" class="btn btn-default f-r m-r-10" id="topic-add-btn">添加课程</button>
+        </div>
+        <div class="panel panel-default">
+            <!-- Default panel contents -->
+            <div class="panel-heading">题库信息</div>
+            <div class="panel-body">
+                <p>说明：单击题目会弹出题目信息，支持增删改查</p>
+            </div>
+
+            <!-- Table -->
+            <table class="table t-c" id="subject">
+                <thead>
+                    <tr>
+                        <th class="clearfix col-md-2 t-c">
+                            <div class="checkbox f-l top-m-0">
+                                <label for="">
+                                    <input id="check-all" type="checkbox" value=""/>
+                                </label>
+                            </div>
+                            题目序号
+                        </th>
+                        <th class="col-md-3 t-c">题目内容</th>
+                        <th class="col-md-2 t-c">所属课程</th>
+                        <th class="col-md-2 t-c">创建时间</th>
+                        <th class="col-md-2 t-c">操作</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+        <div class="clearfix">
+         <!--   <nav>-->
+                <ul id="topic-page" class="pagination top-middle">
+                    <li><a href="#">上一页</a></li>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">...</a></li>
+                    <li><a href="#">10</a></li>
+                    <li><a href="#">下一页</a></li>
+                </ul>
+          <!--  </nav>-->
+        </div>
+
+        <!-- 添加题目弹出框 -->
+        <div id="topic-add-subject" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title">添加题目</h4>
+                    </div>
+                    <div class="modal-body clearfix">
+                        <textarea class="form-control" name="" id="" cols="70" rows="10"></textarea>
+                        <form action="" class="form-horizontal clearfix top-p-l-0 m-t-20" role="form">
+                            <label for="dtp_input2" class="col-md-3 control-label">选择课程：</label>
+                            <div id="" class="input-group col-lg-8 select-subject">
+                                <input type="text" class="form-control" value="">
+                                <div class="input-group-btn">
+                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">课程<span class="caret"></span></button>
+                                    <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                                        <li><a href="#">全部</a></li>
+                                        <li><a href="#">软师</a></li>
+                                        <li><a href="#">程序员</a></li>
+                                        <li><a href="#">前端</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="#">java</a></li>
+                                    </ul>
+                                </div><!-- /btn-group -->
+                            </div><!-- /input-group -->
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">保存</button>
+                        <button type="button" class="btn btn-primary">取消</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--批量添加课程弹出框-->
+        <div id="topic-adda-subject" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title">添加题目</h4>
+                    </div>
+                    <div class="modal-body clearfix">
+                        <input type="file"/>
+                        <form action="" class="form-horizontal clearfix top-p-l-0 m-t-20" role="form">
+                            <label for="dtp_input2" class="col-md-3 control-label">选择课程：</label>
+                            <div class="input-group col-lg-8 select-subject">
+                                <input type="text" class="form-control" value="">
+                                <div class="input-group-btn">
+                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">课程<span class="caret"></span></button>
+                                    <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                                        <li><a href="#">全部</a></li>
+                                        <li><a href="#">软师</a></li>
+                                        <li><a href="#">程序员</a></li>
+                                        <li><a href="#">前端</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="#">java</a></li>
+                                    </ul>
+                                </div><!-- /btn-group -->
+                            </div><!-- /input-group -->
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">保存</button>
+                        <button type="button" class="btn btn-primary">取消</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--导入功能弹出框-->
+        <div id="topic-lead-subject" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title">添加题目</h4>
+                    </div>
+                    <div class="modal-body clearfix">
+                        <form action="" class="form-horizontal clearfix top-p-l-0 m-t-20" role="form">
+                            <label for="dtp_input2" class="col-md-4 control-label">选择要导入的课程：</label>
+                            <div class="input-group col-lg-8 select-subject">
+                                <input type="text" class="form-control" value="">
+                                <div class="input-group-btn">
+                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">课程<span class="caret"></span></button>
+                                    <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                                        <li><a href="#">全部</a></li>
+                                        <li><a href="#">软师</a></li>
+                                        <li><a href="#">程序员</a></li>
+                                        <li><a href="#">前端</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="#">java</a></li>
+                                    </ul>
+                                </div><!-- /btn-group -->
+                            </div><!-- /input-group -->
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">保存</button>
+                        <button type="button" class="btn btn-primary">取消</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--删除功能弹出框-->
+        <div id="topic-delete-subject" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title">删除题目</h4>
+                    </div>
+                    <div class="modal-body clearfix">
+                        确认删除吗？
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">确定</button>
+                        <button type="button" class="btn btn-primary">取消</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--提示选择弹出框-->
+        <div id="topic-error" class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title">ERROR</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>请选择题目</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">确定</button>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div>
+        <!--修改题目弹出框-->
+        <div id="topic-modify-subject" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title">修改题目</h4>
+                    </div>
+                    <div class="modal-body clearfix">
+                        <textarea class="form-control" name="" id="" cols="70" rows="10"></textarea>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">保存</button>
+                        <button type="button" class="btn btn-primary">取消</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <strong class="m-l-20">Copyright © 2016 <a href="http://thoughtcoding.csxupt.com">新卓越计算机教育</a>.</strong> All rights reserved.
+    </footer>
+    <!-- right area end -->
+</div>
+<script type="text/javascript" src = "js/jquery.min.js"></script>
+<script type="text/javascript" src = "js/common.js"></script>
+<script type="text/javascript" src="js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+<script type="text/javascript" src="js/bootstrap-datetimepicker.fr.js" charset="UTF-8"></script>
+<script type="text/javascript" src="js/subject-library.js" charset="UTF-8"></script>
+</body>
+</html>

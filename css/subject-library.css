@@ -1,0 +1,11 @@
+div.right{height:100%;}
+main{height:800px;padding:10px;}
+#top-nav{width:50%;}
+.top-p-l-0{padding-left: 0;}
+.top-m-0{margin:0;}
+.top-display-b{display:block;}
+.top-p-l-15{padding-left:15px;}
+.top-p-r-15{padding-right:15px;}
+div.panel{height:70%;display:block;}
+table tr td:nth-child(2){cursor:pointer;}
+.top-middle{margin-left:30%;margin-right:30%;}

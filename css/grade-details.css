@@ -1,0 +1,102 @@
+/*----------grade-manage-------------*/
+
+/*----------Top:the box of the search-infor and operations------------------*/
+.opr{
+	/*border: 1px solid #ADADAD;*/
+	height: 50px;
+	line-height: 50px;
+	padding-top: 5px;
+}
+.opr div{
+	padding: 0;
+}
+.opr  input[type=text]{
+	height:40px;
+	line-height: 40px;
+	border: 1px solid #9D9D9D;
+	width:70%;
+}
+
+.opr input[type=button]{
+	height: 40px;
+	line-height: 40px;
+	border: none;
+	border-radius: 5px;
+}
+.opr span{
+	/*width: 30%;*/
+	height: 50px;
+	line-height: 50px;
+}
+.opr .selectExam,#box .selectExam{
+	height: 40px;
+	width: 60%;
+}
+.opr .btn-grade{
+	background: #9966cc;
+	/*width:250px;
+	height: 35px;
+	float: left;
+	line-height: 35px;*/
+}
+
+.grade-table{
+	
+}
+.grade-table th,td{
+	text-align: center;
+	width: 15%;
+}
+
+#page{
+	width: 250px;
+	margin: 0px 40%;
+}
+#box{
+	width:300px;
+	height:300px;
+	border:2px solid #000;
+	background: #fff;
+	position:fixed;
+	z-index: 4;
+	top:200px;
+	left:500px;
+	opacity: 0.9;
+	padding:20px;
+	display: none;
+}
+#box span{
+	display: inline-block;
+	line-height: 40px;
+	width: 80px;
+}
+#box input{
+	margin: 10px;
+	height:40px;
+	line-height: 40px;
+	max-width:60%;
+}
+#box .btnBox{
+	width: 80%;
+	position: absolute;
+	bottom: 30px;
+}
+#box .selectExam{
+	height: 40px;
+	width: 155px;
+	margin: 10px;
+	
+}
+/*遮罩层*/
+#mask{
+	width: 100%;
+	height: 100%;
+	background:#000;
+	opacity: 0.4;
+	position: fixed;
+	z-index: 3;
+	top:0;
+	left: 0;
+	display: none;
+}
+

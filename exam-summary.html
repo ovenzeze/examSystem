@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>后台管理模板页</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/ionicons.min.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+    <link rel="stylesheet" type="text/css" href="css/exam-summary.css">
+</head>
+<body class="row">
+
+<!-- left area -->
+   <div class="left col-md-2">
+        <aside>
+            <div class="welcome t-c">
+                <strong>新卓越在线考试管理系统</strong>
+            </div>
+            <ul class="f-16">
+                <li>
+                    <a href="exam-summary.html"><i class="icon ion-navicon-round f-18 m-r-10"></i>  考试概况</a>
+                    <span class="icon ion-ios-arrow-back f-r f-18"></span>
+                </li>
+                <li>
+                    <a href="student-manage.html"><i class="icon ion-person-stalker f-18 m-r-10"></i> 学员管理</a>
+                    <span class="icon ion-ios-arrow-back f-r f-18"></span>
+                </li>
+                <li id="course">
+                    <a href="lesson-info.html"><i class="icon ion-ios-list-outline f-18 m-r-10"></i>  课程管理</a>
+                    <span class="icon ion-ios-arrow-back f-r f-18"></span>
+                </li>
+                <li class="course child-menu">
+                    <a href="lesson-info.html"><i class="icon ion-ios-arrow-forward f-18 m-r-10"></i>  课程信息</a>
+                    <span class="icon ion-ios-arrow-back f-r f-18"></span>
+                </li>
+                <li class="course child-menu">
+                    <a href="subject-library.html"><i class="icon ion-ios-arrow-forward f-18 m-r-10"></i>  题库管理</a>
+                    <span class="icon ion-ios-arrow-back f-r f-18"></span>
+                </li>
+                <li id="assessment">
+                    <a href="exam-manage.html"><i class="icon ion-android-done-all f-18 m-r-10"></i>考核管理</a>
+                    <span class="icon ion-ios-arrow-back f-r f-18"></span>
+                </li>
+                <li class="assessment child-menu">
+                    <a href="exam-manage.html"><i class="icon ion-ios-arrow-forward f-18 m-r-10"></i>  考试管理</a>
+                    <span class="icon ion-ios-arrow-back f-r f-18"></span>
+                </li>
+                <li class="assessment child-menu">
+                    <a href="member-manage.html"><i class="icon ion-ios-arrow-forward f-18 m-r-10"></i>  成员管理</a>
+                    <span class="icon ion-ios-arrow-back f-r f-18"></span>
+                </li>
+                <li id="grade">
+                    <a href="exam-grade.html"><i class="icon ion-calculator f-18 m-r-10"></i>  成绩管理</a>
+                    <span class="icon ion-ios-arrow-back f-r f-18"></span>
+                </li>
+                <li class="grade child-menu">
+                    <a href="exam-grade.html"><i class="icon ion-ios-arrow-forward f-18 m-r-10"></i>  考试成绩</a>
+                    <span class="icon ion-ios-arrow-back f-r f-18"></span>
+                </li>
+                <li class="grade child-menu">
+                    <a href="grade-details.html"><i class="icon ion-ios-arrow-forward f-18 m-r-10"></i>  成绩明细</a>
+                    <span class="icon ion-ios-arrow-back f-r f-18"></span>
+                </li>
+                <li>
+                    <a href="super-manage.html"><i class="icon ion-ios-locked-outline f-18 m-r-10"></i>  超级管理</a>
+                    <span class="icon ion-ios-arrow-back f-r f-18"></span>
+                </li>
+            </ul>
+        </aside>
+    </div>
+<!-- left area end -->
+
+<!-- right area -->
+<div class="right col-md-10 f-r">
+    <header>
+        <span class="notice-body"><i class="icon ion-alert"></i>  公告：</span><span id="notice">2016新卓越秋季软师报名进行中！</span>
+        <span id="userName" class="m-r-10">上午好,卓小越  <a href="##">  退出</a></span>
+    </header>
+    <main> 
+    	<div class="heading clearfix m-b-30">
+        <h4 class="f-l">考试概况 <small>查看和管理考试概况</small></h4>
+        
+    </div>
+        <div class="fliter row m-b-30">
+            <div class="col-md-4">
+                <span>条件筛选：</span>
+                <button type="button" class="btn btn-default dropdown-toggle" id="btn1" data-toggle="dropdown">
+                    ------- <span id="span1">请选择考试</span> ------- <span class="caret"></span>
+                </button>
+                <div class="row  fliter-box" id="fliterBox">
+                    <div class="year col-md-4" id="fliterListNav">
+                        <ul>
+                            <li class="list-item nav-actived" name='0'>最近</li>
+                            <li class="list-item" name='1'>2017</li>
+                            <li class="list-item" name='2'>2016</li>
+                            <li class="list-item" name='3'>2015</li>
+                            <li class="list-item" name='4'>2014</li>
+                        </ul>
+                    </div>
+                    <div class="subject col-md-8" id="fliterList">
+                        <ul>
+                            <li class="list-item">1601软师考试</li>
+                            <li class="list-item">1602软师考试</li>
+                            <li class="list-item">1601程序员考试</li>
+                            <li class="list-item">1602程序员考试</li>
+                            <li class="list-item">1601前端考试</li>
+                            <li class="list-item"></li>
+                            <li class="list-item"></li>
+                            <li class="list-item"></li>
+                            <li class="list-item"></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="input-group col-md-4 col-md-offset-8">
+                <input type="text" class="form-control" placeholder="请输入学号/姓名/课程">
+                <span class="input-group-btn">
+        <button class="btn btn-default" type="button">搜索</button>
+      </span>
+            </div>
+        </div>
+        <ul class="main-content clearfix m-t-30">
+            <li>
+                <a href="#container">
+                    <i class="fa fa-file-code-o f-60  m-t-30 m-b-10"></i>
+                    <p class="f-18 which-class">1501期程序员结业考试</p>
+                    <p class="f-16 which-teacher">任课教师：范老师</p>
+                    <p class="f-16 exam-condition">考试已结束</p>
+                </a>
+                
+            </li>
+            <div class="this-pie"></div>
+            <li>
+                <a href="#">
+                    <i class="fa fa-file-code-o f-60  m-t-30 m-b-10"></i>
+                    <p class="f-18 which-class">1502期程序员结业考试</p>
+                    <p class="f-16 which-teacher">任课教师：范老师</p>
+                    <p class="f-16 exam-condition">考试已结束</p>
+                </a>
+                
+            </li>
+            <div class="this-pie"></div>
+            <li>
+                <a href="#">
+                    <i class="fa fa-file-code-o f-60 m-t-30 m-b-10"></i>
+                    <p class="f-18 which-class">1501期软件工程师业考试</p>
+                    <p class="f-16 which-teacher">任课教师：范老师</p>
+                    <p class="f-16 exam-condition">考试已结束</p>
+                </a>
+                
+            </li> 
+            <div class="this-pie"></div>
+            <li>
+                <a href="#">
+                    <i class="fa fa-file-code-o f-60  m-t-30 m-b-10"></i>
+                    <p class="f-18 which-class">1502期软件工程师结业考试</p>
+                    <p class="f-16 which-teacher">任课教师：范老师</p>
+                    <p class="f-16 exam-condition">考试已结束</p>
+                </a>
+                
+            </li>
+            <div class="this-pie"></div>
+            <li>
+                <a href="#">
+                    <i class="fa fa-file-code-o f-60 m-t-30 m-b-10"></i>
+                    <p class="f-18 which-class">1601期程序员结业考试</p>
+                    <p class="f-16 which-teacher">任课教师：范老师</p>
+                    <p class="f-16 exam-condition">考试已结束</p>
+                </a>
+            </li>
+            <div class="this-pie"></div>
+            <li>
+                <a href="#">
+                    <i class="fa fa-file-code-o f-60 m-t-30 m-b-10"></i>
+                    <p class="f-18 which-class">1601期软件工程师结业考试</p>
+                    <p class="f-16 which-teacher">任课教师：范老师</p>
+                    <p class="f-16 exam-condition">考试已结束</p>
+                </a>
+            </li>
+            <div class="this-pie"></div>
+                <!--<div id="container" class="container-style"></div>-->
+            
+        </ul>
+        
+    </main>
+    <footer>
+    	<strong class="m-l-20">Copyright © 2016 <a href="http://thoughtcoding.csxupt.com">新卓越计算机教育</a>.</strong> All rights reserved.
+    </footer>
+<!-- right area end -->
+</div>
+<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts-all-3.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/dataTool.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/china.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/world.js"></script>
+       <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=ZUONbpqGBsYGXNIYHicvbAbM"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/bmap.min.js"></script> 
+<script type="text/javascript" src = "js/jquery.min.js"></script>
+<script type="text/javascript" src = "js/common.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/exam-summary.js"></script>
+
+<script>
+
+</script>
+</body>
+</html>

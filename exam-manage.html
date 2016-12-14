@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>后台管理模板页</title>
+	<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/ionicons.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/common.css">
+    <link rel="stylesheet" type="text/css" href="./css/exam-manage.css">
+</head>
+<body class="row">
+   <div class="left col-md-2">
+        <aside>
+            <div class="welcome t-c">
+                <strong>新卓越在线考试管理系统</strong>
+            </div>
+            <ul class="f-16">
+                <li>
+                    <a href="exam-summary.html"><i class="icon ion-navicon-round f-18 m-r-10"></i>  考试概况</a>
+                    <span class="icon ion-ios-arrow-back f-r f-18"></span>
+                </li>
+                <li>
+                    <a href="student-manage.html"><i class="icon ion-person-stalker f-18 m-r-10"></i> 学员管理</a>
+                    <span class="icon ion-ios-arrow-back f-r f-18"></span>
+                </li>
+                <li id="course">
+                    <a href="lesson-info.html"><i class="icon ion-ios-list-outline f-18 m-r-10"></i>  课程管理</a>
+                    <span class="icon ion-ios-arrow-back f-r f-18"></span>
+                </li>
+                <li class="course child-menu">
+                    <a href="lesson-info.html"><i class="icon ion-ios-arrow-forward f-18 m-r-10"></i>  课程信息</a>
+                    <span class="icon ion-ios-arrow-back f-r f-18"></span>
+                </li>
+                <li class="course child-menu">
+                    <a href="subject-library.html"><i class="icon ion-ios-arrow-forward f-18 m-r-10"></i>  题库管理</a>
+                    <span class="icon ion-ios-arrow-back f-r f-18"></span>
+                </li>
+                <li id="assessment">
+                    <a href="exam-manage.html"><i class="icon ion-android-done-all f-18 m-r-10"></i>考核管理</a>
+                    <span class="icon ion-ios-arrow-back f-r f-18"></span>
+                </li>
+                <li class="assessment child-menu">
+                    <a href="exam-manage.html"><i class="icon ion-ios-arrow-forward f-18 m-r-10"></i>  考试管理</a>
+                    <span class="icon ion-ios-arrow-back f-r f-18"></span>
+                </li>
+                <li class="assessment child-menu">
+                    <a href="member-manage.html"><i class="icon ion-ios-arrow-forward f-18 m-r-10"></i>  成员管理</a>
+                    <span class="icon ion-ios-arrow-back f-r f-18"></span>
+                </li>
+                <li id="grade">
+                    <a href="exam-grade.html"><i class="icon ion-calculator f-18 m-r-10"></i>  成绩管理</a>
+                    <span class="icon ion-ios-arrow-back f-r f-18"></span>
+                </li>
+                <li class="grade child-menu">
+                    <a href="exam-grade.html"><i class="icon ion-ios-arrow-forward f-18 m-r-10"></i>  考试成绩</a>
+                    <span class="icon ion-ios-arrow-back f-r f-18"></span>
+                </li>
+                <li class="grade child-menu">
+                    <a href="grade-details.html"><i class="icon ion-ios-arrow-forward f-18 m-r-10"></i>  成绩明细</a>
+                    <span class="icon ion-ios-arrow-back f-r f-18"></span>
+                </li>
+                <li>
+                    <a href="super-manage.html"><i class="icon ion-ios-locked-outline f-18 m-r-10"></i>  超级管理</a>
+                    <span class="icon ion-ios-arrow-back f-r f-18"></span>
+                </li>
+            </ul>
+        </aside>
+    </div>
+<div class="right col-md-10 f-r">
+    <header>
+        <span class="notice-body"><i class="icon ion-alert"></i>  公告：</span><span id="notice">2016新卓越秋季软师报名进行中！</span>
+        <span id="userName" class="m-r-10">上午好,卓小越  <a href="##">  退出</a></span>
+    </header>
+<main>
+        <div class="heading clearfix">
+            <h4 class="f-l">成员管理 <small>查看考试成员</small></h4>
+            <ol class="breadcrumb f-r">
+                <li><a href="exam-summer.html">考试概况</a></li>
+                <li><a href="exam-mamage.html">考核管理</a></li>
+                <li class="active">考试管理</li>
+            </ol>
+        </div>
+    <ul class="content clearfix">
+        <li class="f-l">
+            <div class="class_first">
+                <img src="images/pic-01.png">
+                <div class="p">
+                    <p class="first">2016年程序员考试(春)</p>
+                    <p class="second"><span>1103</span>人已练习</p>
+                </div>
+                <div class="check">查看考试</div>
+                <div class="editor">编辑考试</div>
+            </div>
+        </li>
+        <li class="f-l">
+            <div class="class_first">
+                <img src="images/pic-02.png">
+                <div class="p">
+                    <p class="first">2016年程序员考试(秋)</p>
+                    <p class="second"><span>1050</span>人已练习</p>
+                </div>
+                <div class="check">查看考试</div>
+                <div class="editor">编辑考试</div>
+            </div>
+        </li>
+        <li class="f-l">
+            <div class="class_first">
+                <img src="images/pic-03.png">
+                <div class="p">
+                    <p class="first">2015年程序员考试(春)</p>
+                    <p class="second"><span>1120</span>人已练习</p>
+                </div>
+                <div class="check">查看考试</div>
+                <div class="editor">编辑考试</div>
+            </div>
+        </li>
+        <li class="f-l">
+            <div class="class_first">
+                <img src="images/pic-04.png">
+                <div class="p">
+                    <p class="first">2015年程序员考试(秋)</p>
+                    <p class="second"><span>1020</span>人已练习</p>
+                </div>
+                <div class="check">查看考试</div>
+                <div class="editor">编辑考试</div>
+            </div>
+        </li>
+        <li class="f-l">
+            <div class="class_first">
+                <img src="images/pic-05.png">
+                <div class="p">
+                    <p class="first">2014年程序员考试(春)</p>
+                    <p class="second"><span>1032</span>人已练习</p>
+                </div>
+                <div class="check">查看考试</div>
+                <div class="editor">编辑考试</div>
+            </div>
+        </li>
+        <li class="f-l">
+            <div class="class_first">
+                <img src="images/pic-06.png">
+                <div class="p">
+                    <p class="first">2014年程序员考试(秋)</p>
+                    <p class="second"><span>1152</span>人已练习</p>
+                </div>
+                <div class="check">查看考试</div>
+                <div class="editor">编辑考试</div>
+            </div>
+        </li>
+        <li class="f-l">
+            <div class="class_first">
+                <img src="images/pic-07.png">
+                <div class="p">
+                    <p class="first">2013年程序员考试(春)</p>
+                    <p class="second"><span>1032</span>人已练习</p>
+                </div>
+                <div class="check">查看考试</div>
+                <div class="editor">编辑考试</div>
+            </div>
+        </li>
+        <li class="f-l">
+            <div class="class_first">
+                <img src="images/pic-08.png">
+                <div class="p">
+                    <p class="first">2015年程序员考试(秋)</p>
+                    <p class="second"><span>1032</span>人已练习</p>
+                </div>
+                <div class="check">查看考试</div>
+                <div class="editor">编辑考试</div>
+            </div>
+        </li>
+    </ul>
+</main>
+    <footer>
+    	<strong class="m-l-20">Copyright © 2016 <a href="http://thoughtcoding.csxupt.com">新卓越计算机教育</a>.</strong> All rights reserved.
+    </footer>
+</div>
+<script type="text/javascript"src = "js/jquery.min.js"></script>
+<script type="text/javascript" src = "js/common.js"></script>
+</body>
+</html>
