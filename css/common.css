@@ -240,15 +240,25 @@ html,body{
 .left ul li i{
 	width: 10px;
 }
+.left a{
+	text-decoration: none;
+}
+.left a:hover{
+	color: rgba(184,199,206,0.8);
+}
 .left ul li:hover{
 		border-left: 2px solid #FFFFCC;
 	background-color: rgba(26,34,38,1);
 }
+.left aside .nav-list-item-actived{
+	border-left: 2px solid #FFFFCC;
+  background-color: rgba(26,34,38,1);
+}
 .left ul .menu-name{
 	background-color: rgba(26,34,38,0.3);
 }
-.left ul .child-menu{
-	background-color: rgba(184,199,220,0.1);
+.child-menu{
+	/*background-color: rgba(184,199,220,0.1);*/
 	display: none;
 }
 /*left area end*/

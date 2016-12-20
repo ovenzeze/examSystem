@@ -1,261 +1,7 @@
-
-for(var j=0;j<$('.main-content li').length;j++){
-	//alert($('.main-content li a').length);
-    $('.main-content li')[j].index=j;
-	$('.main-content li').eq(j).on('click',function(){
-		//alert(this.index);
-	for(var i=0;i<$('.main-content li').length;i++){
-		$('.main-content li').eq(i).css('display','none');	
-	}
-	$('.this-pie').eq(this.index).css('display','block');
-	//alert(123);
-})}
-
-var aPie=document.getElementsByClassName("this-pie");
-//alert(aPie.length);
-//指定图表的配置项和数据
-
-var option1 = {
-    title : {
-        text: '1501期程序员结业考试',
-        //subtext: '1511级程序员班',
-        x:'center'
-    },
-    tooltip : {
-        trigger: 'item',
-        formatter: "{a} <br/>{b} : {c} ({d}%)"
-    },
-    legend: {
-        orient: 'vertical',
-        left: 'left',
-        data: ['80分以下','80-90分','90-100分','100-110分','110分以上']
-    },
-    series : [
-        {
-            name: '成绩统计',
-            type: 'pie',
-            radius : '55%',
-            center: ['50%', '60%'],
-            data:[
-                {value:30, name:'80分以下'},
-                {value:20, name:'80-90分'},
-                {value:20, name:'90-100分'},
-                {value:10, name:'100-110分'},
-                {value:10, name:'110分以上'}
-            ],
-            itemStyle: {
-                emphasis: {
-                    shadowBlur: 10,
-                    shadowOffsetX: 0,
-                    shadowColor: 'rgba(0, 0, 0, 0.5)'
-                }
-            }
-        }
-    ]
-};
-var option2 = {
-    title : {
-        text: '1502期程序员结业考试',
-        //subtext: '1511级软师班',
-        x:'center'
-    },
-    tooltip : {
-        trigger: 'item',
-        formatter: "{a} <br/>{b} : {c} ({d}%)"
-    },
-    legend: {
-        orient: 'vertical',
-        left: 'left',
-        data: ['80分以下','80-90分','90-100分','100-110分','110分以上']
-    },
-    series : [
-        {
-            name: '成绩统计',
-            type: 'pie',
-            radius : '55%',
-            center: ['50%', '60%'],
-            data:[
-                {value:30, name:'80分以下'},
-                {value:10, name:'80-90分'},
-                {value:30, name:'90-100分'},
-                {value:20, name:'100-110分'},
-                {value:10, name:'110分以上'}
-            ],
-            itemStyle: {
-                emphasis: {
-                    shadowBlur: 10,
-                    shadowOffsetX: 0,
-                    shadowColor: 'rgba(0, 0, 0, 0.5)'
-                }
-            }
-        }
-    ]
-};
-var option3 = {
-    title : {
-        text: '1501期软件工程师业考试',
-        //subtext: '1605级程序员班',
-        x:'center'
-    },
-    tooltip : {
-        trigger: 'item',
-        formatter: "{a} <br/>{b} : {c} ({d}%)"
-    },
-    legend: {
-        orient: 'vertical',
-        left: 'left',
-        data: ['80分以下','80-90分','90-100分','100-110分','110分以上']
-    },
-    series : [
-        {
-            name: '成绩统计',
-            type: 'pie',
-            radius : '55%',
-            center: ['50%', '60%'],
-            data:[
-                {value:20, name:'80分以下'},
-                {value:10, name:'80-90分'},
-                {value:50, name:'90-100分'},
-                {value:10, name:'100-110分'},
-                {value:10, name:'110分以上'}
-            ],
-            itemStyle: {
-                emphasis: {
-                    shadowBlur: 10,
-                    shadowOffsetX: 0,
-                    shadowColor: 'rgba(0, 0, 0, 0.5)'
-                }
-            }
-        }
-    ]
-};
-var option4 = {
-    title : {
-        text: '1502期软件工程师结业考试',
-        //subtext: '1605级软师班',
-        x:'center'
-    },
-    tooltip : {
-        trigger: 'item',
-        formatter: "{a} <br/>{b} : {c} ({d}%)"
-    },
-    legend: {
-        orient: 'vertical',
-        left: 'left',
-       data: ['80分以下','80-90分','90-100分','100-110分','110分以上']
-    },
-    series : [
-        {
-            name: '成绩统计',
-            type: 'pie',
-            radius : '55%',
-            center: ['50%', '60%'],
-            data:[
-                {value:20, name:'80分以下'},
-                {value:20, name:'80-90分'},
-                {value:40, name:'90-100分'},
-                {value:10, name:'100-110分'},
-                {value:10, name:'110分以上'}
-            ],
-            itemStyle: {
-                emphasis: {
-                    shadowBlur: 10,
-                    shadowOffsetX: 0,
-                    shadowColor: 'rgba(0, 0, 0, 0.5)'
-                }
-            }
-        }
-    ]
-};
-var option5 = {
-    title : {
-        text: '1601期程序员结业考试',
-        //subtext: '1511级程序员班',
-        x:'center'
-    },
-    tooltip : {
-        trigger: 'item',
-        formatter: "{a} <br/>{b} : {c} ({d}%)"
-    },
-    legend: {
-        orient: 'vertical',
-        left: 'left',
-        data: ['80分以下','80-90分','90-100分','100-110分','110分以上']
-    },
-    series : [
-        {
-            name: '成绩统计',
-            type: 'pie',
-            radius : '55%',
-            center: ['50%', '60%'],
-            data:[
-                {value:30, name:'80分以下'},
-                {value:20, name:'80-90分'},
-                {value:20, name:'90-100分'},
-                {value:10, name:'100-110分'},
-                {value:10, name:'110分以上'}
-            ],
-            itemStyle: {
-                emphasis: {
-                    shadowBlur: 10,
-                    shadowOffsetX: 0,
-                    shadowColor: 'rgba(0, 0, 0, 0.5)'
-                }
-            }
-        }
-    ]
-};
-var option6 = {
-    title : {
-        text: '1601期软件工程师结业考试',
-        //subtext: '1511级程序员班',
-        x:'center'
-    },
-    tooltip : {
-        trigger: 'item',
-        formatter: "{a} <br/>{b} : {c} ({d}%)"
-    },
-    legend: {
-        orient: 'vertical',
-        left: 'left',
-        data: ['80分以下','80-90分','90-100分','100-110分','110分以上']
-    },
-    series : [
-        {
-            name: '成绩统计',
-            type: 'pie',
-            radius : '55%',
-            center: ['50%', '60%'],
-            data:[
-                {value:30, name:'80分以下'},
-                {value:20, name:'80-90分'},
-                {value:20, name:'90-100分'},
-                {value:10, name:'100-110分'},
-                {value:10, name:'110分以上'}
-            ],
-            itemStyle: {
-                emphasis: {
-                    shadowBlur: 10,
-                    shadowOffsetX: 0,
-                    shadowColor: 'rgba(0, 0, 0, 0.5)'
-                }
-            }
-        }
-    ]
-};
-var aOption=[option1,option2,option3,option4,option5,option6];
-for(var i=0;i<aPie.length;i++)
-{
-    //初始化echarts实例
-        var mychart1 = echarts.init(aPie[i]);
-
-//使用指定的配置和数据显示图表
-        mychart1.setOption(aOption[i]);
-}
-
 // multiple select menu
 $('#btn1').click(function() {
     $('#fliterBox').css("display") == "block" ? $('#fliterBox').hide('slow') : $('#fliterBox').show('slow');
+     
 });
 // switch and show fliterList items
 for (var i = 0; i < $('#fliterListNav ul li').length; i++) {
@@ -283,7 +29,102 @@ for (var j = 0; j < $('#fliterList ul li').length; j++) {
     $('#fliterList ul li:eq(' + j + ')').click(function(event) {
         $('#fliterBox').hide('slow');
         $('#span1').text(this.innerHTML);
-    });
+        //条件筛选匹配课程名
+         var grade=$('#span1').html().substring(0,4);
+var classKind=$('#span1').html().substring(4,6);
+var re=eval("/"+grade+classKind+"/");
+for(var i=0;i<$('.which-class').length;i++){ 
+$('.which-class')[i].innerHTML.replace(re,function($0,$1,$2){	
+     for(var j=0;j<$('.which-class').length;j++){
+     	$('.main-content li').eq(j).css('display','none');
+     }
+     $('.main-content li').eq(i).css('display','block');
+})
 }
 
+
+    });
+}
 // multiple menu end
+
+//请求方式get
+//请求字段 .../exam-summary/classInfor
+//var classInfor=[
+//  {
+//	"which-class":"1501软师考试",
+//	"which-teacher":"任课教师：范老师",
+//	"exam-condition":"考试已结束",
+//	"pieInfor":[
+//      {value:30, name:'80分以下'},
+//      {value:20, name:'80-90分'},
+//      {value:20, name:'90-100分'},
+//      {value:10, name:'100-110分'},
+//      {value:10, name:'110分以上'}
+//     ],
+//     "tableInfor":[{
+//      "studentID" : "06144134",
+//		"studentName" : "卓小越",
+//		"grade" : "76",
+//		"examName" : "1601期前端工程师"
+//		},
+//     {
+//      "studentID" : "06144134",
+//		"studentName" : "卓小越",
+//		"grade" : "76",
+//		"examName" : "1601期前端工程师"
+//		},
+//     {
+//      "studentID" : "06144134",
+//		"studentName" : "卓小越",
+//		"grade" : "76",
+//		"examName" : "1601期前端工程师"
+//		}]
+//	},	
+//	 
+//	 {
+//	"which-class":"1502软师考试",
+//	"which-teacher":"任课教师：范老师",
+//	"exam-condition":"考试已结束"
+//	},
+//	 {
+//	"which-class":"1503软师考试",
+//	"which-teacher":"任课教师：范老师",
+//	"exam-condition":"考试已结束"
+//	},
+//	 {
+//	"which-class":"1503软师考试",
+//	"which-teacher":"任课教师：范老师",
+//	"exam-condition":"考试已结束"
+//	},
+//	
+//]						
+$(function(){
+				$.ajax({
+					type:'get',
+					url:"http://123.206.204.163:2333/exam/classInfor/",
+					scriptCharset:'utf-8',
+					async:true,
+					dataType:"json",
+					success:function(classInfor){
+						console.log(classInfor);
+						//var data=JSON.parse(a);
+						
+						for(var i in classInfor){
+							
+							$('.main-content').append(
+							'<li><a href="exam-summary-detail.html"><i class="fa fa-file-pdf-o f-60  m-b-10"></i><p class="f-18 which-class">'+classInfor[i]['which-class']
+							+'</p><p class="f-16 which-teacher">'+classInfor[i]['which-teacher']
+							+'</p><p class="f-16 exam-condition">'+classInfor[i]['exam-condition']
+							+'</p></a></li>');
+							
+						}
+						for(var j=0;j<$('.main-content li').length;j++){
+							$('.main-content li')[j].index=j;
+							$('.main-content li').eq(j).click(function(){	
+								classID=this.index;
+								//alert(classID);
+							})
+						}
+					}
+				})
+			})

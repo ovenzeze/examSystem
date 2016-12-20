@@ -1,3 +1,4 @@
+//默认
 .m-0{margin:0;}
 body{
 	font-size:14px;
@@ -15,6 +16,14 @@ main{
 	width: 260px;
 	margin: 0 40%;
 }
+#userThead .checkbox{
+	margin: 0px;
+	}
+#userTbody .checkbox{
+	margin:0px;
+	
+}
+
 .zz{
 	width: 100%;
 	height: 100%;
@@ -24,10 +33,12 @@ main{
 	top: 0;
 	left: 0;
 	display: none;
+	z-index: 3;
 }
+
 .add-user{
 	width: 30rem;
-	height: 40rem;
+	height: 32rem;
 	background-color: white;
 	border: 0.2rem lightblue solid;
 	position: absolute;
@@ -37,7 +48,9 @@ main{
 	bottom: 0;
 	margin: auto;
 	display: none;
+	z-index: 4;
 }
+
 .add-manager{
 	width: 30rem;
 	height: 22rem;
@@ -50,6 +63,7 @@ main{
 	bottom: 0;
 	margin: auto;
 	display: none;
+	z-index: 4;
 }
 .add-header{
 	height: 6%;
@@ -63,11 +77,14 @@ main{
 	position: relative;
 	padding: 4px 0;
 }
-.add-header input{
+.add-header i{
 	border: none;
 	background-color: lightblue;
 	position:absolute;
 	right: 0;
+	font-size: 30px;
+	font-weight: 300;
+	cursor: pointer;
 }
 #addUserInform,#cancelChange{
 	width: 60px;
@@ -78,8 +95,11 @@ main{
 	position:absolute;
 	right: 0;
 }
+td span{
+	padding: 0 25px;
+	}
 .editor{
-	padding: 8%;
+	padding: 8% 8% 8% 0;
 	font-size:14px;
 	font-family:Arial,Verdana,Tahoma,"微软雅黑","黑体";
 }
@@ -158,4 +178,11 @@ main{
 }
 .formtips{
 	color: red ;
+	}
+tbody tr td i{
+	color: cornflowerblue;
+	padding: 0 7px;
+	}
+tbody tr:nth-last-of-type{
+	color: cornflowerblue;
 	}

@@ -22,22 +22,22 @@ form{
 	
 	background-color:#fff;
 	padding-top:65px;
-	padding-left:5.3%;
+	padding-left:4%;
 	padding-bottom:65px;
 	}
 .main-content li{
-	width:28%;
-	height:300px;
+	width:21%;
+	/*height:200px;*/
 	background-color:#f8f9fb;
 	border:1px #eceef4 solid;
 	float:left;
-	padding-top: 20px;
-	margin-right:5.3%;
-	margin-bottom:5.3%;
+	padding: 3%;
+	margin-right:4%;
+	margin-bottom:4%;
 	}
 .main-content li a{
 	width:100%;
-	height:260px;  
+	/*height:260px; */ 
 	display:block;
 	pointer:cursor;
 	text-decoration: none;
@@ -79,7 +79,11 @@ form{
 	width: 500px;
 	height: 550px;
 	float: left;
-	display: none;	
+	display: none;
+	margin:0 auto;	
+}
+.this-pie-box{
+	padding:0 5%;
 }
 #class-menu{
 	width: 250px;
@@ -131,4 +135,9 @@ form{
 .subject ul li:hover,.year ul li:hover{
 	font-size:16px;
 	background-color: rgba(91,192,222,0.2);
+}
+.back{
+	width:100%;
+	text-align: end;
+	padding-right:5%;
 }
