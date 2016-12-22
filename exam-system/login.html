@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>登陆页面</title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/ionicons.min.css">
+		<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="css/common.css">
+	</head>
+
+	<body>
+		<!--top menu-->
+		<header>
+			<img src="img/图标.jpg">
+			<strong>新卓越在线考试管理系统</strong>
+			<span id="userName" class="m-r-10"><a href="index.html">  退出</a></span>
+		</header>
+		<!-- section area -->
+		<div class="section col-md-10  clearfix">
+			<div class="tab-content">
+				<div class="ion-log-in1">
+					<p class="p1">登陆</p>
+					<form method="get" action="student.html" class="form-denglu">
+						<input type="text" id="studentNum_input" placeholder="请输入学号" value="">
+						<input type="text" id="passwd_rigester_input" placeholder="请输入密码" value="">
+					</form>
+					<label class="radio-inline">
+					  <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 学生
+				</label>
+					<label class="radio-inline">
+					  <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 教师
+				</label>
+					<form method="get" class="form-denglu" id="login1">
+						<input type="button" value="登陆" class="btn btn-info" id="denglu">
+					</form>
+					<input type="checkbox" id="inlineCheckbox1" value="option1" class="self-motion">
+					<span>下次自动登陆</span>
+					<a href="#" class="gaimi">忘记密码？</a>
+				</div>
+			</div>
+		</div>
+		<!-- section area end -->
+		<div class="footer">
+			<strong class="footer m-l-20">Copyright © 2016 <a href="http://thoughtcoding.csxupt.com">新卓越计算机教育</a>.All rights reserved.</strong>
+		</div>
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+		<script>
+			var oXuehao = document.getElementById('studentNum_input');
+			var oMima = document.getElementById('passwd_rigester_input');
+			var oDenglu = document.getElementById('denglu');
+			var str = '';
+			$('#inlineRadio1').click(
+				function() {
+					if(oXuehao.value == "") {
+					alert("请输入学号");
+				} else if(oMima.value == "") {
+					alert('请输入密码')
+				}
+					if(oXuehao.value && oMima.value) {
+						str = '<a href = "student.html"><input type="button"  value="登陆" class="btn btn-info" id="denglu" /></a>';
+					$("#login1").html(str);
+					}
+					
+				}
+			)
+			$('#inlineRadio2').click(
+				function() {
+					if(oXuehao.value == "") {
+					alert("请输入学号");
+				} else if(oMima.value == "") {
+					alert('请输入密码')
+				}
+					if(oXuehao.value && oMima.value) {
+					str = '<a href = "exam-manage.html"><input type="button"  value="登陆" class="btn btn-info" id="denglu" /></a>';
+					$("#login1").html(str);
+					}
+				}
+			)
+		//	oDenglu.onclick = function() {
+//				if(oXuehao.value == "") {
+//					alert("请输入学号");
+//				} else if(oMima.value == "") {
+//					alert('请输入密码')
+//				}
+				if(oXuehao.value && oMima.value) {
+//					if($('#inlineRadio1').is(':checked')) {
+//						//alert()
+//						str = '<a href = "student.html"><input type="button"  value="登陆" class="btn btn-info" id="denglu" /></a>';
+//
+//					} else {
+//						str = '<a href = "exam-manage.html"><input type="button"  value="登陆" class="btn btn-info" id="denglu" /></a>';
+//
+//					}
+					//$("#login1").html(str);
+				}
+		//	}
+		</script>
+	</body>
+
+</html>
