@@ -1,0 +1,943 @@
+//考试系统
+ var userList = [{
+     "考试名称": "2018软师考试",
+     "学号": "06143097",
+     "姓名": "卓小越01",
+     "状态": "待考试",
+ }, {
+     "考试名称": "2017软师考试",
+     "学号": "06143096",
+     "姓名": "卓小越01",
+     "状态": "待考试",
+ }, {
+     "考试名称": "2019软师考试",
+     "学号": "06143095",
+     "姓名": "卓小越01",
+     "状态": "待考试",
+ }, {
+     "考试名称": "2016软师考试",
+     "学号": "06143094",
+     "姓名": "卓小越01",
+     "状态": "待考试",
+ }, {
+     "考试名称": "2017软师考试",
+     "学号": "06143093",
+     "姓名": "卓小越01",
+     "状态": "待考试",
+ }, {
+     "考试名称": "2018软师考试",
+     "学号": "06143092",
+     "姓名": "卓小越01",
+     "状态": "待考试",
+ }, {
+     "考试名称": "2019软师考试",
+     "学号": "06143091",
+     "姓名": "卓小越01",
+     "状态": "待考试",
+ }];
+ //成绩明细
+ //请求方式 ：get
+ //请求字段： exam/gradeDetails
+ var gradeDetails = [{
+     "studentID": "04143001",
+     "studentName": "卓小越",
+     "examName": "2016程序员考试",
+     "grade": "65"
+ }, {
+     "studentID": "04143001",
+     "studentName": "卓小越",
+     "examName": "2016程序员考试",
+     "grade": "65"
+ }];
+ var libraryInfo = [{
+     'id': 'L1',
+     'content': 'Doctype作用？标准模式与兼容模式各有什么区别?',
+     'time': '2015',
+     'type': '前端',
+     'kind': '简答题',
+     'anwser': '（1）、<!DOCTYPE>声明位于位于HTML文档中的第一行，处于 <html> 标签之前。告知浏览器的解析器用什么文档标准解析这个文档。DOCTYPE不存在或格式不正确会导致文档以兼容模式呈现。（2）、标准模式的排版 和JS运作模式都是以该浏览器支持的最高标准运行。在兼容模式中，页面以宽松的向后兼容的方式显示,模拟老式浏览器的行为以防止站点无法工作。'
+ }, {
+     'id': 'L2',
+     'content': '以下不是c语言规定保留字的是()。　　 (1) float　　(2) integer　　(3) signed　　(4) unsigned ',
+     'time': '2014',
+     'type': '程序员',
+     'kind': '选择题',
+     'anwser': '(2)'
+ }, {
+     'id': 'L3',
+     'content': '下列字符中，其ASCII码值最大的是()A .9 B.D C.a D.y ',
+     'time': '2014',
+     'type': '软师',
+     'kind': '选择题',
+     'answer': 'D'
+ }];
+ //url:exam/studentManage
+ //请求方式：get
+ var studentManage = {
+     "studentInfo": [{
+         "studentNum": "06144134",
+         "studentName": "卓小越",
+         "studentMajor": "通信工程",
+         "studentClass": "1602期前端工程师",
+         "classState": "已完成"
+     }, {
+         "studentNum": "06144564",
+         "studentName": "张三",
+         "studentMajor": "电子信息工程",
+         "studentClass": "1602期前端工程师",
+         "classState": "已完成"
+     }, {
+         "studentNum": "06544564",
+         "studentName": "小明",
+         "studentMajor": "电子信息工程",
+         "studentClass": "1602期前端工程师",
+         "classState": "已完成"
+     }, {
+         "studentNum": "06148764",
+         "studentName": "卓越",
+         "studentMajor": "信息安全",
+         "studentClass": "1602期前端工程师",
+         "classState": "已完成"
+     }, {
+         "studentNum": "06144564",
+         "studentName": "小华",
+         "studentMajor": "网络工程",
+         "studentClass": "1602期前端工程师",
+         "classState": "已完成"
+     }, {
+         "studentNum": "06144974",
+         "studentName": "越越",
+         "studentMajor": "电子信息工程",
+         "studentClass": "1602期程序员",
+         "classState": "已完成"
+     }, {
+         "studentNum": "06144344",
+         "studentName": "卓越",
+         "studentMajor": "电子信息工程",
+         "studentClass": "1601期程序员",
+         "classState": "已完成"
+     }],
+     "classList": [{
+         "className": "1601期前端工程师"
+     }, {
+         "className": "1602期软件工程师"
+     }]
+ };
+ //请求方式：get
+ //url:exam/superManage
+ 	var superManage = [{
+ 				"manageNum" : "00000011",
+ 				"manageName" : "范老师",
+ 				"manageClass" : "1601期程序员"
+ 				} , {
+ 				"manageNum" : "00000012",
+ 				"manageName" : "范老师",
+ 				"manageClass" : "1602期程序员"
+ 				} ,{
+ 				"manageNum" : "06000343",
+ 				"manageName" : "范老师",
+ 				"manageClass" : "1603期程序员"
+ 				} , {
+ 				"manageNum" : "06876876",
+ 				"manageName" : "魏老师",
+ 				"manageClass" : "1601期前端工程师"
+ 				} , {
+ 				"manageNum" : "06565453",
+ 				"manageName" : "魏老师",
+ 				"manageClass" : "1602期前端工程师"
+ 				} , {
+ 				"manageNum" : "06467567",
+ 				"manageName" : "范老师",
+ 				"manageClass" : "1601期软件工程师"
+ 				} , {
+ 				"manageNum" : "06436654",
+ 				"manageName" : "范老师",
+ 				"manageClass" : "1601期软件工程师"
+      }];
+      //请求方式get
+      //请求字段 .../exam-summary/classInfor
+      var classInfor = [{
+              "which-class": "1501软师考试",
+              "which-teacher": "任课教师：范老师",
+              "exam-condition": "考试已结束",
+              "pieInfor": [{
+                  "value": "30",
+                  "name": '80分以下'
+              }, {
+                  "value": "20",
+                  "name": '80-90分'
+              }, {
+                  "value": "20",
+                  "name": '90-100分'
+              }, {
+                  "value": "10",
+                  "name": '100-110分'
+              }, {
+                  "value": "10",
+                  "name": '110分以上'
+              }],
+              "tableInfor": [{
+                  "studentID": "06144134",
+                  "studentName": "卓小越",
+                  "grade": "76",
+                  "examName": "1601期前端工程师"
+              }, {
+                  "studentID": "06144134",
+                  "studentName": "卓小越",
+                  "grade": "76",
+                  "examName": "1601期前端工程师"
+              }, {
+                  "studentID": "06144134",
+                  "studentName": "卓小越",
+                  "grade": "76",
+                  "examName": "1601期前端工程师"
+              }]
+          },
+          {
+              "which-class": "1502软师考试",
+              "which-teacher": "任课教师：范老师",
+              "exam-condition": "考试已结束"
+          }, {
+              "which-class": "1503软师考试",
+              "which-teacher": "任课教师：范老师",
+              "exam-condition": "考试已结束"
+          }, {
+              "which-class": "1503软师考试",
+              "which-teacher": "任课教师：范老师",
+              "exam-condition": "考试已结束"
+          }
+      ];
+      //请求方式get
+     //请求字段 .../exam/examGradeDetails
+     var examGradeDetails = [{
+             "pieInfor": [{
+                     "value": "30",
+                     "name": '80分以下'
+                 }, {
+                     "value": "20",
+                     "name": '80-90分'
+                 }, {
+                     "value": "20",
+                     "name": '90-100分'
+                 }, {
+                     "value": "10",
+                     "name": '100-110分'
+                 }],
+             "tableInfor": [{
+                 "studentID": "06144134",
+                 "studentName": "卓小越",
+                 "grade": "76",
+                 "examName": "1601期前端工程师"
+             }, {
+                 "studentID": "06144134",
+                 "studentName": "卓小越",
+                 "grade": "76",
+                 "examName": "1601期前端工程师"
+             }, {
+                 "studentID": "06144134",
+                 "studentName": "卓小越",
+                 "grade": "76",
+                 "examName": "1601期前端工程师"
+             }],
+             "pieInfor": [{
+                 value: 30,
+                 name: '80分以下'
+             }, {
+                 value: 20,
+                 name: '80-90分'
+             }, {
+                 value: 20,
+                 name: '90-100分'
+             }, {
+                 value: 10,
+                 name: '100-110分'
+             }, {
+                 value: 10,
+                 name: '110分以上'
+             }],
+             "tableInfor": [{
+                 "studentID": "06144134",
+                 "studentName": "卓小越",
+                 "grade": "76",
+                 "examName": "1601期前端工程师"
+             }, {
+                 "studentID": "06144134",
+                 "studentName": "卓小越",
+                 "grade": "76",
+                 "examName": "1601期前端工程师"
+             }, {
+                 "studentID": "06144134",
+                 "studentName": "卓小越",
+                 "grade": "76",
+                 "examName": "1601期前端工程师"
+             }],
+             "pieInfor": [{
+                 value: 30,
+                 name: '80分以下'
+             }, {
+                 value: 20,
+                 name: '80-90分'
+             }, {
+                 value: 20,
+                 name: '90-100分'
+             }, {
+                 value: 10,
+                 name: '100-110分'
+             }, {
+                 value: 10,
+                 name: '110分以上'
+             }],
+             "tableInfor": [{
+                 "studentID": "06144134",
+                 "studentName": "卓小越",
+                 "grade": "76",
+                 "examName": "1601期前端工程师"
+             }, {
+                 "studentID": "06144134",
+                 "studentName": "卓小越",
+                 "grade": "76",
+                 "examName": "1601期前端工程师"
+             }, {
+                 "studentID": "06144134",
+                 "studentName": "卓小越",
+                 "grade": "76",
+                 "examName": "1601期前端工程师"
+             }],
+             "pieInfor": [{
+                 value: 30,
+                 name: '80分以下'
+             }, {
+                 value: 20,
+                 name: '80-90分'
+             }, {
+                 value: 20,
+                 name: '90-100分'
+             }, {
+                 value: 10,
+                 name: '100-110分'
+             }, {
+                 value: 10,
+                 name: '110分以上'
+             }],
+             "tableInfor": [{
+                 "studentID": "06144134",
+                 "studentName": "卓小越",
+                 "grade": "76",
+                 "examName": "1601期前端工程师"
+             }, {
+                 "studentID": "06144134",
+                 "studentName": "卓小越",
+                 "grade": "76",
+                 "examName": "1601期前端工程师"
+             }, {
+                 "studentID": "06144134",
+                 "studentName": "卓小越",
+                 "grade": "76",
+                 "examName": "1601期前端工程师"
+             }]
+         }
+     ];
+     //url:exam/examManage
+     //请求方式：get
+     		 var examInfo =  [{
+     				"examName" : "1601期程序员考试",
+     				"teacherName" : "范老师",
+     				"examState" : "公开考试",
+     				"examTime" : "2016-12-30"
+     				} , {
+     				"examName" : "1602期程序员考试",
+     				"teacherName" : "范老师",
+     				"examState" : "公开考试",
+     				"examTime" : "2016-12-30"
+     				} , {
+     				"examName" : "1601期前端考试",
+     				"teacherName" : "范老师",
+     				"examState" : "公开考试",
+     				"examTime" : "2016-12-30"
+     				} ,{
+     				"examName" : "1602前端考试",
+     				"teacherName" : "范老师",
+     				"examState" : "公开考试",
+     				"examTime" : "2016-12-30"
+     				} ,{
+     				"examName" : "1601期软师考试",
+     				"teacherName" : "范老师",
+     				"examState" : "公开考试",
+     				"examTime" : "2016-12-30"
+     				} ,{
+     				"examName" : "1602软师考试",
+     				"teacherName" : "范老师",
+     				"examState" : "公开考试",
+     				"examTime" : "2016-12-30"
+     				} ,{
+     				"examName" : "1601期java考试",
+     				"teacherName" : "范老师",
+     				"examState" : "公开考试",
+     				"examTime" : "2016-12-30"
+     				} ,{
+     				"examName" : "1602期java考试",
+     				"teacherName" : "范老师",
+     				"examState" : "公开考试",
+     				"examTime" : "2016-12-30"
+     				}];
+ /*得到课程列表*/
+ //方法：GET
+ //uri: exam/courseInfo
+ var courseInfo = [{
+     "CourseId": "C1",
+     "CourseName": "C语言程序设计基础",
+     "CourseTime": "300学时",
+     "BeginTime": "2016-9-1",
+     "EndTime": "2016-12-31",
+     "TeacherName": "王大宝",
+     "PersonNum": "400人"
+ }, {
+     "CourseId": "C2",
+     "CourseName": "java程序设计基础",
+     "CourseTime": "400学时",
+     "BeginTime": "2016-12-1",
+     "EndTime": "2017-3-31",
+     "TeacherName": "李大宝",
+     "PersonNum": "300人"
+ }, {
+     "CourseId": "C3",
+     "CourseName": "软件设计师考试培训",
+     "CourseTime": "500学时",
+     "BeginTime": "2016-12-1",
+     "EndTime": "2017-5-31",
+     "TeacherName": "范大宝",
+     "PersonNum": "600人"
+ }];
+ /*得到添加课程列表*/
+ //方法：GET
+ //uri: exam/courseAdd
+ var courseAdd = [{
+     "CourseImg": "exam/course_add/course1.jpg",
+     "CourseName": "财务分析与决策"
+ }, {
+     "CourseImg": "exam/course_add/course2.jpg",
+     "CourseName": "逻辑学概论"
+ }, {
+     "CourseImg": "exam/course_add/course3.jpg",
+     "CourseName": "现代生物学导论"
+ }];
+ //水果
+ //请求方式 get
+ //请求字段  123.206.204.163:2333/fruit/firstPage/firstPage
+ var firstPage = { //首页
+     "img": [ //首页轮播图
+         "https://img11.360buyimg.com/cms/jfs/t3559/175/2327004955/209931/284a4856/584aaaecN9b66ba24.jpg",
+         "https://img10.360buyimg.com/cms/jfs/t3961/152/358652708/137163/23081d1e/584aa98dNfcc14706.jpg",
+         "https://img14.360buyimg.com/cms/jfs/t3634/231/2254234744/319616/736b45f8/5846dd97N4ee2290f.jpg",
+         "https://img10.360buyimg.com/cms/jfs/t3466/152/2225425798/412356/e9065bb6/5847863eNd784e032.jpg"
+     ],
+     "bannerImg": [ //分类活动介绍图
+         "http://img2.imgtn.bdimg.com/it/u=3592629172,4143700958&fm=21&gp=0.jpg",
+         "http://img0.imgtn.bdimg.com/it/u=579749687,872896795&fm=21&gp=0.jpg",
+         "http://img2.imgtn.bdimg.com/it/u=631153663,863616715&fm=21&gp=0.jpg"
+     ],
+     "goodsList": [{ //一共有九个商品
+         "img": "https://img12.360buyimg.com/n5/jfs/t2968/364/965543637/548823/725fe48c/576e3500Nd8f634db.jpg",
+         "fname": "新疆哈密瓜",
+         "sellNumber": "300",
+         "active": "推荐",
+         "weight": "一份/约4个",
+         "price": "15",
+     }],
+     "detailAddress": "陕西省西安市长安区西安邮电大学图书馆A111",
+     "cartGoodsNum": "1"
+ };
+ //请求方式 get
+ //请求字段  123.206.204.163:2333/fruit/searchHot
+ var searchHot = { //搜索和热门搜索
+     hotList: ["哈密瓜", "菠萝", "苹果", "火龙果", "西柚", "橙子", "奇异果", "樱桃"],
+     recommendGoods: [{
+         "img": "https://img12.360buyimg.com/n5/jfs/t2968/364/965543637/548823/725fe48c/576e3500Nd8f634db.jpg",
+         "fname": "新疆哈密瓜",
+         "sellNumber": "300",
+         "active": "推荐",
+         "weight": "一份/约4个",
+         "price": "15"
+     }]
+ };
+ //请求方式 get
+ //请求字段  123.206.204.163:2333/fruit/searchHistory/userId
+ var searchHistory = { //历史搜索
+     historyList: ["哈密瓜", "菠萝", "苹果", "火龙果", "西柚"]
+ };
+ //请求方式 get
+ //请求字段  123.206.204.163:2333/fruit/search/searchInfor
+ var search = { //点击查找
+     "img": "https://img12.360buyimg.com/n5/jfs/t2968/364/965543637/548823/725fe48c/576e3500Nd8f634db.jpg",
+     "fname": "新疆哈密瓜",
+     "sellNumber": "300",
+     "active": "推荐",
+     "weight": "一份/约4个",
+     "price": "15"
+ };
+ //请求方式 get
+ //请求字段  123.206.204.163:2333/fruit/indent/userId
+ var indent = { //所有订单
+     "img": "https://img12.360buyimg.com/n5/jfs/t2968/364/965543637/548823/725fe48c/576e3500Nd8f634db.jpg",
+     "fname": "新疆哈密瓜",
+     "weight": "一个/约2-3kg",
+     "amount": "1",
+     "price": "15"
+ };
+ //请求方式 get
+ //请求字段  123.206.204.163:2333/fruit/waitPay/userId
+ var waitPay = { //待付款
+     "img": "https://img12.360buyimg.com/n5/jfs/t2968/364/965543637/548823/725fe48c/576e3500Nd8f634db.jpg",
+     "fname": "新疆哈密瓜",
+     "weight": "一个/约2-3kg",
+     "amount": "1",
+     "price": "15"
+ };
+ //请求方式 get
+ //请求字段  123.206.204.163:2333/fruit/waitReceive/userId
+ var waitReceive = { //待收货
+     "img": "https://img12.360buyimg.com/n5/jfs/t2968/364/965543637/548823/725fe48c/576e3500Nd8f634db.jpg",
+     "fname": "新疆哈密瓜",
+     "weight": "一个/约2-3kg",
+     "amount": "1",
+     "price": "15"
+ };
+ //请求方式 get
+ //请求字段  123.206.204.163:2333/fruit/waitEvaluate/userId
+ var waitEvaluate = { //待评价
+     "img": "https://img12.360buyimg.com/n5/jfs/t2968/364/965543637/548823/725fe48c/576e3500Nd8f634db.jpg",
+     "fname": "新疆哈密瓜",
+     "weight": "一个/约2-3kg",
+     "amount": "1",
+     "price": "15"
+ };
+ //请求方式 get
+ //请求字段  123.206.204.163:2333/fruit/goodsEvaluate/{userId，goodsId}
+ var goodsEvaluate = { //对某件商品进行评价
+     "img": "https://img12.360buyimg.com/n5/jfs/t2968/364/965543637/548823/725fe48c/576e3500Nd8f634db.jpg",
+     "fname": "新疆哈密瓜",
+     "weight": "一个/约2-3kg",
+     "amount": "1",
+     "price": "15"
+ };
+ //请求方式 get
+ //请求字段  123.206.204.163:2333/fruit/indentFinish/userId
+ var indentFinish = { //已完成订单
+     "img": "https://img12.360buyimg.com/n5/jfs/t2968/364/965543637/548823/725fe48c/576e3500Nd8f634db.jpg",
+     "fname": "新疆哈密瓜",
+     "weight": "一个/约2-3kg",
+     "amount": "1",
+     "price": "15"
+ };
+ //请求方式 get
+ //请求字段  123.206.204.163:2333/fruit/allAfterSale/userId
+ var allAfterSale = { //我的售后，包含所有可申请商品
+     "img": "https://img12.360buyimg.com/n5/jfs/t2968/364/965543637/548823/725fe48c/576e3500Nd8f634db.jpg",
+     "fname": "新疆哈密瓜",
+     "amount": "1"
+ };
+ //请求方式 get
+ //请求字段  123.206.204.163:2333/fruit/goodsAfterSale/userId
+ var goodsAfterSale = { //某件物品进行售后申请
+     "img": "https://img12.360buyimg.com/n5/jfs/t2968/364/965543637/548823/725fe48c/576e3500Nd8f634db.jpg",
+     "fname": "新疆哈密瓜",
+     "amount": "1"
+ }
+
+ //请求方式 get
+ //请求字段  123.206.204.163:2333/fruit/allAfterSale/userId
+ var allAfterSale = { //售后申请进度列表
+     "img": "https://img12.360buyimg.com/n5/jfs/t2968/364/965543637/548823/725fe48c/576e3500Nd8f634db.jpg",
+     "fname": "新疆哈密瓜",
+     "amount": "1"
+ };
+ //请求方式 get
+ //请求字段  123.206.204.163:2333/fruit/goodsAfterSale/{userId,goodsId}
+ var goodsAfterSale = { //某件商品售后申请进度
+     "img": "https://img12.360buyimg.com/n5/jfs/t2968/364/965543637/548823/725fe48c/576e3500Nd8f634db.jpg",
+     "fname": "新疆哈密瓜",
+     "amount": "1",
+     "state": "已完成"
+ };
+ //请求方式 get
+ //请求字段  123.206.204.163:2333/fruit/goodsSort
+ var goodsSort = { //商品分类列表的商品信息
+     'berry_list': [{
+         "img": "https://img12.360buyimg.com/n5/jfs/t2968/364/965543637/548823/725fe48c/576e3500Nd8f634db.jpg",
+         "fname": "新疆哈密瓜",
+         "sellNumber": "300",
+         "active": "推荐",
+         "weight": "一份/约4个",
+         "price": "15"
+     }],
+     'mellon_list': [{
+         "img": "https://img12.360buyimg.com/n5/jfs/t2968/364/965543637/548823/725fe48c/576e3500Nd8f634db.jpg",
+         "fname": "新疆哈密瓜",
+         "sellNumber": "300",
+         "active": "推荐",
+         "weight": "一份/约4个",
+         "price": "15"
+
+     }],
+     'orange_list': [{
+         "img": "https://img12.360buyimg.com/n5/jfs/t2968/364/965543637/548823/725fe48c/576e3500Nd8f634db.jpg",
+         "fname": "新疆哈密瓜",
+         "sellNumber": "300",
+         "active": "推荐",
+         "weight": "一份/约4个",
+         "price": "15"
+
+     }],
+     'stone_list': [{
+         "img": "https://img12.360buyimg.com/n5/jfs/t2968/364/965543637/548823/725fe48c/576e3500Nd8f634db.jpg",
+         "fname": "新疆哈密瓜",
+         "sellNumber": "300",
+         "active": "推荐",
+         "weight": "一份/约4个",
+         "price": "15"
+
+     }],
+     'kernel_list': [{
+         "img": "https://img12.360buyimg.com/n5/jfs/t2968/364/965543637/548823/725fe48c/576e3500Nd8f634db.jpg",
+         "fname": "新疆哈密瓜",
+         "sellNumber": "300",
+         "active": "推荐",
+         "weight": "一份/约4个",
+         "price": "15"
+
+     }],
+     "cartGoodsNum": "1"
+ };
+ //请求方式 post
+ //请求字段  123.206.204.163:2333/fruit/icart/{userId}
+ var icart = { //购物车
+     "img": "https://img12.360buyimg.com/n5/jfs/t2968/364/965543637/548823/725fe48c/576e3500Nd8f634db.jpg",
+     "fname": "新疆哈密瓜",
+     "amount": "1",
+     "price": "15",
+     "cname": "果果",
+     "telephone": "17864533689",
+     "detailAddress": "陕西省西安市长安区西安邮电大学图书馆A111",
+     "cartGoodsNum": "1"
+ };
+ //请求方式 get
+ //请求字段  123.206.204.163:2333/fruit/mine/{userId}
+ var mine = { //我的
+     "uname": "吃货的世界",
+     "photo": "http://v1.qzone.cc/avatar/201303/18/15/31/5146c2c11f516164.jpg%21200x200.jpg",
+     "cartGoodsNum": "1"
+ };
+ //请求方式 post
+ //请求字段  123.206.204.163:2333/fruit/recommend
+ var recommend = { //店长推荐
+     "bannerImg": "https://img11.360buyimg.com/cms/jfs/t3559/175/2327004955/209931/284a4856/584aaaecN9b66ba24.jpg",
+     "goodsList": [{
+         "img": "https://img12.360buyimg.com/n5/jfs/t2968/364/965543637/548823/725fe48c/576e3500Nd8f634db.jpg",
+         "fname": "新疆哈密瓜",
+         "sellNumber": "300",
+         "active": "推荐",
+         "weight": "一份/约4个",
+         "price": "15"
+     }]
+ };
+ //请求方式 post
+ //请求字段  123.206.204.163:2333/fruit/todaySale
+ var todaySale = { //今日特价
+     "bannerImg": "https://img11.360buyimg.com/cms/jfs/t3559/175/2327004955/209931/284a4856/584aaaecN9b66ba24.jpg",
+     "goodsList": [{
+         "img": "https://img12.360buyimg.com/n5/jfs/t2968/364/965543637/548823/725fe48c/576e3500Nd8f634db.jpg",
+         "fname": "新疆哈密瓜",
+         "sellNumber": "300",
+         "active": "推荐",
+         "weight": "一份/约4个",
+         "price": "15"
+     }]
+ };
+ //请求方式 post
+ //请求字段  123.206.204.163:2333/fruit/newgoods
+ var newgoods = { //新品尝鲜
+     "bannerImg": "https://img11.360buyimg.com/cms/jfs/t3559/175/2327004955/209931/284a4856/584aaaecN9b66ba24.jpg",
+     "goodsList": [{
+         "img": "https://img12.360buyimg.com/n5/jfs/t2968/364/965543637/548823/725fe48c/576e3500Nd8f634db.jpg",
+         "fname": "新疆哈密瓜",
+         "sellNumber": "300",
+         "active": "推荐",
+         "weight": "一份/约4个",
+         "price": "15"
+     }]
+ };
+ //请求方式 post
+ //请求字段  123.206.204.163:2333/fruit/setSale
+ var setSale = { //组合优惠
+     "bannerImg": "https://img11.360buyimg.com/cms/jfs/t3559/175/2327004955/209931/284a4856/584aaaecN9b66ba24.jpg",
+     "goodsList": [{
+         "img": "https://img12.360buyimg.com/n5/jfs/t2968/364/965543637/548823/725fe48c/576e3500Nd8f634db.jpg",
+         "fname": "新疆哈密瓜",
+         "sellNumber": "300",
+         "active": "推荐",
+         "weight": "一份/约4个",
+         "price": "15"
+     }]
+ };
+ //请求方式 get
+ //请求字段  123.206.204.163:2333/fruit/goodsDetailInfor/goodsId
+ var goodsDetailInfor = { //商品详情中的商品信息
+     "img": "https://img12.360buyimg.com/n5/jfs/t2968/364/965543637/548823/725fe48c/576e3500Nd8f634db.jpg",
+     "kind": "哈密瓜",
+     "fname": "新疆哈密瓜",
+     "weight": "一份/约4个",
+     "price": "15",
+     "img": [ //轮播图
+         "https://img12.360buyimg.com/n5/jfs/t2968/364/965543637/548823/725fe48c/576e3500Nd8f634db.jpg",
+         "https://img12.360buyimg.com/n5/jfs/t2830/180/2596851197/333905/7b8e67d5/576e3504Nd2fc4239.jpg",
+         "https://img12.360buyimg.com/n5/jfs/t2746/217/2699789909/139802/d793c7cb/576e3508N313cf596.jpg",
+         "https://img12.360buyimg.com/n5/jfs/t2647/18/2685952061/37005/dde390bb/576e3510N10249f73.jpg"
+     ],
+     detailImg: [ //商品详情图片
+         "https://img30.360buyimg.com/popWaterMark/jfs/t2944/297/2407818756/749850/4e8867e5/57a72e04N4bc6cdee.jpg",
+         "https://img30.360buyimg.com/popWaterMark/jfs/t3229/291/145370491/491558/944fd1ca/57a72e06Ne6a81df0.jpg",
+         "https://img30.360buyimg.com/popWaterMark/jfs/t3043/281/582181844/701653/8f808cf7/57a72e09Nc582d1e0.jpg",
+         "https://img30.360buyimg.com/popWaterMark/jfs/t2737/174/3984190108/435411/e1d51eb7/57a72e0aN9a931f0b.jpg",
+         "https://img30.360buyimg.com/popWaterMark/jfs/t3079/309/128778967/628657/1de8baa5/57a72e0cN1fe2c64a.jpg",
+         "https://img30.360buyimg.com/popWaterMark/jfs/t3061/320/133219653/212152/230d1cb0/57a72e0dNf250605c.jpg"
+     ],
+     "area": "新疆"
+ };
+ //请求方式 get
+ //请求字段  123.206.204.163:2333/fruit/evalute/{userId,goodsId}
+ var evalute = { //评论
+     "fname": "新疆哈密瓜",
+     "star": "5",
+     "evalueText": "水果很新鲜，很好吃",
+     "evaluteTime": "2016-06-15"
+ };
+ //二手市场
+ //请求方式：get
+ //请求字段：erbao/recentTrading
+     var recentTrading = { //首页最近买卖
+         "recentSeller": "Rainbow~",
+         "recentTime": "11:05",
+         "recentProduct": "华硕x450c"
+     };
+     //首页热门卖家	请求字段：erbao/homeHotSeller
+     var homeHotSeller = {
+         "hoSellerName": "Rainbow~",
+         "hotNumber": "3"
+     };
+     //首页商品展示	请求字段：erbao/productDetails
+     var productDetails = {
+         "detailsImg": "http://pic.sogou.com/d?query=%BB%AA%CB%B6%CD%BC%C6%AC%CD%F8%D6%B7&mode=1&did=124#did123",
+         "detailsNew": "九成新",
+         "detailsPrice": "￥1399",
+         "detailsName": "华硕x450c",
+         "detailsSeller": "Rainbow~",
+         "detailsTime": "11:05",
+         "detailsAddress": "西安邮电大学"
+     };
+     //请求方式：get
+     //请求字段：erbao/hotSeller
+     //热门卖家（3个）
+     var hotSeller = {
+         "hotseller1": [{
+             "hotSellerID": "06143097",
+             "nickName": "rainBow",
+             "phone": "15829300306",
+             "QQ": "814363312",
+             "wechat": "jsahdu",
+             "addrass": "西安邮电大学长安校区",
+             "rencent": [{
+                 "goodsID": "computer01",
+                 "goodsName": "华硕x450c",
+                 "price": "1299",
+                 "condition": "9",
+                 "img": "",
+                 "href": ""
+             }]
+         }],
+         "hotSeller2": [{
+             "hotSellerID": "03143061",
+             "nickName": "rain",
+             "phone": "15667027855",
+             "QQ": "78659087",
+             "wechat": "skajkc",
+             "addrass": "xian",
+             "recent": [{
+                 "goodsID": "phone02",
+                 "goodsName": "iphone6s",
+                 "price": "2999",
+                 "condition": "7",
+                 "img": "",
+                 "href": ""
+             }]
+         }],
+         "hotSeller3": [{
+             "hotSellerID": "09658745",
+             "nickName": "cloud",
+             "phone": "15698076545",
+             "QQ": "9863356687",
+             "wechat": "kasdk-009",
+             "addrass": "henan",
+             "recent": [{
+                 "goodsID": "coat12",
+                 "goodsName": "hsanc",
+                 "price": "342",
+                 "condition": "8",
+                 "img": "",
+                 "href": ""
+             }]
+         }]
+     };
+     //请求方式：get
+     //请求字段：erbao/classify/goodsItem
+     //分类页面下的商品列表（3个商品）
+     var goodsItem = {
+         "goodsItem1": [{
+             "goodsId": "computer01",
+             "goodsName": "联想小新",
+             "goodsXinjiu": "六成新",
+             "goodsImg": "https://img13.360buyimg.com/cms/jfs/t3526/224/1562420950/33773/ad1bfbf3/582aa8e5N8b35fbc6.jpg",
+             "goodsPrice": "2000"
+         }],
+         "goodsItem2": [{
+             "goodsId": "computer02",
+             "goodsName": "华为",
+             "goodsXinjiu": "七成新",
+             "goodsImg": "https://img13.360buyimg.com/cms/jfs/t3526/224/1562420950/33773/ad1bfbf3/582aa8e5N8b35fbc6.jpg",
+             "goodsPrice": "2000"
+         }],
+         "goodsItem3": [{
+             "goodsId": "computer03",
+             "goodsName": "联想小新",
+             "goodsXinjiu": "六成新",
+             "goodsImg": "https://img13.360buyimg.com/cms/jfs/t3526/224/1562420950/33773/ad1bfbf3/582aa8e5N8b35fbc6.jpg",
+             "goodsPrice": "2000"
+         }]
+     };
+     //请求方式：get
+     //请求字段：erbao/userInformation
+     //发布商品页左侧用户信息
+         var userInformation = {
+             "userHeader": "http://pic.qiantucdn.com/58pic/21/47/21/20w58PIC5JC.jpg!qt226",
+             "nickName": "rainBow",
+             "credit": "5",
+             "sellNum": "10",
+             "buyNum": "2",
+             "address": "丈八东路往西十字路口",
+             "phone": "15829300306",
+             "wechat": "djhb54564"
+         };
+         //请求方式：get
+         //请求字段：erbao/ order form/{{ usersDetails}}
+         //订单页面用户详情
+         var usersDetails = {
+             "userHeader": "http://pic.qiantucdn.com/58pic/21/47/21/20w58PIC5JC.jpg!qt226",
+             "userName": "二宝",
+             "userStar": 3,
+             "goodsSell": 10,
+             "goodsBuy": 9,
+             "userAddress": "丈八东路十字路口",
+             "phone": 15848515222,
+             "weixin": "hsg123456"
+         };
+         //请求方式：get
+         //请求字段：erbao/ productDetails /{{ goodsDetails}}
+         //商品详情页商品详情
+         var goodsDetails = {
+             "price": 1200,
+             "address": "西安市长安区",
+             "time": "一个月",
+             "goodType": "待售商品",
+             "priceType": "是"
+         };
+         //请求方式：get
+         //请求字段：erbao/productDetails
+        //购物车页面
+             var productDetails = {
+                 "sellerName": "卖家一",
+                 "img": "http://pic.qiantucdn.com/58pic/22/88/42/57e35937d5b08.jpg!qt226",
+                 "productName": "黄桃干",
+                 "summary": "三只松鼠黄桃干 *2",
+                 "unitPrice": 12,
+                 "number": 2
+             };
+             //请求方式：get
+             //请求字段：erbao/ goodsDetails
+             var goodsDetails = {
+                 "goodsType": "onSale", //onSale,"want","saled","done"
+                 "goodsImg": "http://pic.qiantucdn.com/58pic/16/46/40/58358PIC8EV.jpg!qt226",
+                 "goodsName": "自行车",
+                 "goodsSummary": "金黄色的",
+                 "adress": "陕西省西安市",
+                 "time": "2016-12-12"
+             };
+             var information = {
+                 "img": "http://pic.qiantucdn.com/58pic/21/47/21/20w58PIC5JC.jpg!qt226",
+                 "userName": "二宝",
+                 "reputation": 3,
+                 "phone": 152646462,
+                 "QQ": 25454651
+             };
+             //拼车
+             //请求方式	get
+             //请求字段	123.206.204.163:2333/goCar/viewOrder
+             //查看订单
+             viewOrder = [{
+                 "time": "12:20",
+                 "placeofDeparture": "赛高街区",
+                 "destination": "小寨",
+                 "peopleNum": "3"
+             }, {
+                 "time": "12:20",
+                 "placeofDeparture": "赛高街区",
+                 "destination": "小寨",
+                 "peopleNum": "3"
+             }, {
+                 "time": "12:20",
+                 "placeofDeparture": "赛高街区",
+                 "destination": "小寨",
+                 "peopleNum": "3"
+             }, {
+                 "time": "12:20",
+                 "placeofDeparture": "西安邮电大学",
+                 "destination": "小寨",
+                 "peopleNum": "3"
+             }, {
+                 "time": "12:20",
+                 "placeofDeparture": "西安邮电大学",
+                 "destination": "小寨",
+                 "peopleNum": "3"
+             }];
+             //请求方式	get
+             //请求字段	123.206.204.163:2333/goCar/historicalOrders
+             //历史订单
+             historicalOrders = [{
+                 "time": "12:20",
+                 "peopleNum": "3",
+                 " placeofDeparture ": "赛高街区",
+                 "destination": "西安邮电大学",
+                 "status": "已完成"
+             }, {
+                 "time": "12:20",
+                 "peopleNum": "3",
+                 " placeofDeparture ": "赛高街区",
+                 "destination": "西安邮电大学",
+                 "status": "已完成"
+             }, {
+                 "time": "12:20",
+                 "peopleNum": "3",
+                 " placeofDeparture ": "赛高街区",
+                 "destination": "西安邮电大学",
+                 "status": "已完成"
+             }, {
+                 "time": "12:20",
+                 "peopleNum": "3",
+                 " placeofDeparture ": "钟楼",
+                 "destination": "西安邮电大学",
+                 "status": "已完成"
+             }, {
+                 "time": "12:20",
+                 "peopleNum": "3",
+                 " placeofDeparture ": "钟楼",
+                 "destination": "西安邮电大学",
+                 "status": "已完成"
+             }];
