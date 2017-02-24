@@ -5,10 +5,10 @@
 # 整体架构
 详见仓库根目录下需求说明书。
 # 技术栈
-为了保证整体风格统一和兼容性，考试系统和管理系统前端部分，均基于Bootstrap3实现，JavaScript使用了Jqery和Echart。
-后台部分，目前仅使用基于Node的Koa框架进行数据Mook。
+为了保证整体风格统一和兼容性，考试系统和管理系统前端部分，均基于`Bootstrap3`实现，`JavaScript`使用了`Jquery`和`Echart`。
+后台部分，目前仅使用基于`Node`的`Koa`框架进行数据`Mook`。
 # API约定
-详见仓库根目录下data.json
+详见仓库根目录下`data.json`
 # 成员分工
 <img src="http://123.206.204.163:2333/media/member-division.jpg" width = "400px"/>
 # 后续开发方向
