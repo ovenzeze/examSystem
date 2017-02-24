@@ -2,6 +2,8 @@
 新卓越在线考试系统，整个项目分为考试系统`exam-system`和管理系统`manage-system`两个部分。
 考试系统实现学员登录、在线考试、成绩查看等功能，管理系统实现系统概览、学员管理、成绩管理、
 考试管理、试题管理等功能。
+
+项目预览地址：[http://123.206.204.163:2333/exam-system-manage/](http://123.206.204.163:2333/exam-system-manage/manage-system/exam-summary.html)
 # 整体架构
 详见仓库`DOCS目录`下需求说明书。
 # 技术栈
