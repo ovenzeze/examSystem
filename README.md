@@ -11,7 +11,8 @@
 详见仓库根目录下data.json
 # 成员分工
 ![成员分工](http://123.206.204.163:2333/media/member-division.jpg)
+<img src="http://123.206.204.163:2333/media/member-division.jpg" width = "300px" height = "300px"/>
 # 后续开发方向
-* 开发可用后台支撑系统，不再使用数据Mook 
+* 开发可用后台支撑系统，不再使用数据Mook
 * 完善在线考试系统部分
 * 提高系统流畅性，增强用户体验
