@@ -142,7 +142,7 @@ $('#searchBtn').on('click',function(){
 
 //get the form of course
 window.onload = function() {
-    ajax('http://123.206.204.163:2333/exam/courseInfo/', function (res) {
+    ajax('http://clayz.top/exam/courseInfo/', function (res) {
         var json = JSON.parse(res);
         for (var attr in json) {
             var html = '<tr><td><input type="checkbox" name="part"></td>';

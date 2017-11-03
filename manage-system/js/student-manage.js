@@ -197,7 +197,7 @@ function studentTabke(studentInfo){
 $(document).ready(function(){
 		$.ajax({
 			type:"get",
-			url:"http://123.206.204.163:2333/exam/studentManage",
+			url:"http://clayz.top/exam/studentManage",
 			scriptCharset:"utf-8",
 			async:true,
 			success:function(result){

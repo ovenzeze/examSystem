@@ -423,7 +423,7 @@
  }];
  //水果
  //请求方式 get
- //请求字段  123.206.204.163:2333/fruit/firstPage/firstPage
+ //请求字段  clayz.top/fruit/firstPage/firstPage
  var firstPage = { //首页
      "img": [ //首页轮播图
          "https://img11.360buyimg.com/cms/jfs/t3559/175/2327004955/209931/284a4856/584aaaecN9b66ba24.jpg",
@@ -448,7 +448,7 @@
      "cartGoodsNum": "1"
  };
  //请求方式 get
- //请求字段  123.206.204.163:2333/fruit/searchHot
+ //请求字段  clayz.top/fruit/searchHot
  var searchHot = { //搜索和热门搜索
      hotList: ["哈密瓜", "菠萝", "苹果", "火龙果", "西柚", "橙子", "奇异果", "樱桃"],
      recommendGoods: [{
@@ -461,12 +461,12 @@
      }]
  };
  //请求方式 get
- //请求字段  123.206.204.163:2333/fruit/searchHistory/userId
+ //请求字段  clayz.top/fruit/searchHistory/userId
  var searchHistory = { //历史搜索
      historyList: ["哈密瓜", "菠萝", "苹果", "火龙果", "西柚"]
  };
  //请求方式 get
- //请求字段  123.206.204.163:2333/fruit/search/searchInfor
+ //请求字段  clayz.top/fruit/search/searchInfor
  var search = { //点击查找
      "img": "https://img12.360buyimg.com/n5/jfs/t2968/364/965543637/548823/725fe48c/576e3500Nd8f634db.jpg",
      "fname": "新疆哈密瓜",
@@ -476,7 +476,7 @@
      "price": "15"
  };
  //请求方式 get
- //请求字段  123.206.204.163:2333/fruit/indent/userId
+ //请求字段  clayz.top/fruit/indent/userId
  var indent = { //所有订单
      "img": "https://img12.360buyimg.com/n5/jfs/t2968/364/965543637/548823/725fe48c/576e3500Nd8f634db.jpg",
      "fname": "新疆哈密瓜",
@@ -485,7 +485,7 @@
      "price": "15"
  };
  //请求方式 get
- //请求字段  123.206.204.163:2333/fruit/waitPay/userId
+ //请求字段  clayz.top/fruit/waitPay/userId
  var waitPay = { //待付款
      "img": "https://img12.360buyimg.com/n5/jfs/t2968/364/965543637/548823/725fe48c/576e3500Nd8f634db.jpg",
      "fname": "新疆哈密瓜",
@@ -494,7 +494,7 @@
      "price": "15"
  };
  //请求方式 get
- //请求字段  123.206.204.163:2333/fruit/waitReceive/userId
+ //请求字段  clayz.top/fruit/waitReceive/userId
  var waitReceive = { //待收货
      "img": "https://img12.360buyimg.com/n5/jfs/t2968/364/965543637/548823/725fe48c/576e3500Nd8f634db.jpg",
      "fname": "新疆哈密瓜",
@@ -503,7 +503,7 @@
      "price": "15"
  };
  //请求方式 get
- //请求字段  123.206.204.163:2333/fruit/waitEvaluate/userId
+ //请求字段  clayz.top/fruit/waitEvaluate/userId
  var waitEvaluate = { //待评价
      "img": "https://img12.360buyimg.com/n5/jfs/t2968/364/965543637/548823/725fe48c/576e3500Nd8f634db.jpg",
      "fname": "新疆哈密瓜",
@@ -512,7 +512,7 @@
      "price": "15"
  };
  //请求方式 get
- //请求字段  123.206.204.163:2333/fruit/goodsEvaluate/{userId，goodsId}
+ //请求字段  clayz.top/fruit/goodsEvaluate/{userId，goodsId}
  var goodsEvaluate = { //对某件商品进行评价
      "img": "https://img12.360buyimg.com/n5/jfs/t2968/364/965543637/548823/725fe48c/576e3500Nd8f634db.jpg",
      "fname": "新疆哈密瓜",
@@ -521,7 +521,7 @@
      "price": "15"
  };
  //请求方式 get
- //请求字段  123.206.204.163:2333/fruit/indentFinish/userId
+ //请求字段  clayz.top/fruit/indentFinish/userId
  var indentFinish = { //已完成订单
      "img": "https://img12.360buyimg.com/n5/jfs/t2968/364/965543637/548823/725fe48c/576e3500Nd8f634db.jpg",
      "fname": "新疆哈密瓜",
@@ -530,14 +530,14 @@
      "price": "15"
  };
  //请求方式 get
- //请求字段  123.206.204.163:2333/fruit/allAfterSale/userId
+ //请求字段  clayz.top/fruit/allAfterSale/userId
  var allAfterSale = { //我的售后，包含所有可申请商品
      "img": "https://img12.360buyimg.com/n5/jfs/t2968/364/965543637/548823/725fe48c/576e3500Nd8f634db.jpg",
      "fname": "新疆哈密瓜",
      "amount": "1"
  };
  //请求方式 get
- //请求字段  123.206.204.163:2333/fruit/goodsAfterSale/userId
+ //请求字段  clayz.top/fruit/goodsAfterSale/userId
  var goodsAfterSale = { //某件物品进行售后申请
      "img": "https://img12.360buyimg.com/n5/jfs/t2968/364/965543637/548823/725fe48c/576e3500Nd8f634db.jpg",
      "fname": "新疆哈密瓜",
@@ -545,14 +545,14 @@
  }
 
  //请求方式 get
- //请求字段  123.206.204.163:2333/fruit/allAfterSale/userId
+ //请求字段  clayz.top/fruit/allAfterSale/userId
  var allAfterSale = { //售后申请进度列表
      "img": "https://img12.360buyimg.com/n5/jfs/t2968/364/965543637/548823/725fe48c/576e3500Nd8f634db.jpg",
      "fname": "新疆哈密瓜",
      "amount": "1"
  };
  //请求方式 get
- //请求字段  123.206.204.163:2333/fruit/goodsAfterSale/{userId,goodsId}
+ //请求字段  clayz.top/fruit/goodsAfterSale/{userId,goodsId}
  var goodsAfterSale = { //某件商品售后申请进度
      "img": "https://img12.360buyimg.com/n5/jfs/t2968/364/965543637/548823/725fe48c/576e3500Nd8f634db.jpg",
      "fname": "新疆哈密瓜",
@@ -560,7 +560,7 @@
      "state": "已完成"
  };
  //请求方式 get
- //请求字段  123.206.204.163:2333/fruit/goodsSort
+ //请求字段  clayz.top/fruit/goodsSort
  var goodsSort = { //商品分类列表的商品信息
      'berry_list': [{
          "img": "https://img12.360buyimg.com/n5/jfs/t2968/364/965543637/548823/725fe48c/576e3500Nd8f634db.jpg",
@@ -609,7 +609,7 @@
      "cartGoodsNum": "1"
  };
  //请求方式 post
- //请求字段  123.206.204.163:2333/fruit/icart/{userId}
+ //请求字段  clayz.top/fruit/icart/{userId}
  var icart = { //购物车
      "img": "https://img12.360buyimg.com/n5/jfs/t2968/364/965543637/548823/725fe48c/576e3500Nd8f634db.jpg",
      "fname": "新疆哈密瓜",
@@ -621,14 +621,14 @@
      "cartGoodsNum": "1"
  };
  //请求方式 get
- //请求字段  123.206.204.163:2333/fruit/mine/{userId}
+ //请求字段  clayz.top/fruit/mine/{userId}
  var mine = { //我的
      "uname": "吃货的世界",
      "photo": "http://v1.qzone.cc/avatar/201303/18/15/31/5146c2c11f516164.jpg%21200x200.jpg",
      "cartGoodsNum": "1"
  };
  //请求方式 post
- //请求字段  123.206.204.163:2333/fruit/recommend
+ //请求字段  clayz.top/fruit/recommend
  var recommend = { //店长推荐
      "bannerImg": "https://img11.360buyimg.com/cms/jfs/t3559/175/2327004955/209931/284a4856/584aaaecN9b66ba24.jpg",
      "goodsList": [{
@@ -641,7 +641,7 @@
      }]
  };
  //请求方式 post
- //请求字段  123.206.204.163:2333/fruit/todaySale
+ //请求字段  clayz.top/fruit/todaySale
  var todaySale = { //今日特价
      "bannerImg": "https://img11.360buyimg.com/cms/jfs/t3559/175/2327004955/209931/284a4856/584aaaecN9b66ba24.jpg",
      "goodsList": [{
@@ -654,7 +654,7 @@
      }]
  };
  //请求方式 post
- //请求字段  123.206.204.163:2333/fruit/newgoods
+ //请求字段  clayz.top/fruit/newgoods
  var newgoods = { //新品尝鲜
      "bannerImg": "https://img11.360buyimg.com/cms/jfs/t3559/175/2327004955/209931/284a4856/584aaaecN9b66ba24.jpg",
      "goodsList": [{
@@ -667,7 +667,7 @@
      }]
  };
  //请求方式 post
- //请求字段  123.206.204.163:2333/fruit/setSale
+ //请求字段  clayz.top/fruit/setSale
  var setSale = { //组合优惠
      "bannerImg": "https://img11.360buyimg.com/cms/jfs/t3559/175/2327004955/209931/284a4856/584aaaecN9b66ba24.jpg",
      "goodsList": [{
@@ -680,7 +680,7 @@
      }]
  };
  //请求方式 get
- //请求字段  123.206.204.163:2333/fruit/goodsDetailInfor/goodsId
+ //请求字段  clayz.top/fruit/goodsDetailInfor/goodsId
  var goodsDetailInfor = { //商品详情中的商品信息
      "img": "https://img12.360buyimg.com/n5/jfs/t2968/364/965543637/548823/725fe48c/576e3500Nd8f634db.jpg",
      "kind": "哈密瓜",
@@ -704,7 +704,7 @@
      "area": "新疆"
  };
  //请求方式 get
- //请求字段  123.206.204.163:2333/fruit/evalute/{userId,goodsId}
+ //请求字段  clayz.top/fruit/evalute/{userId,goodsId}
  var evalute = { //评论
      "fname": "新疆哈密瓜",
      "star": "5",
@@ -879,7 +879,7 @@
              };
              //拼车
              //请求方式	get
-             //请求字段	123.206.204.163:2333/goCar/viewOrder
+             //请求字段	clayz.top/goCar/viewOrder
              //查看订单
              viewOrder = [{
                  "time": "12:20",
@@ -908,7 +908,7 @@
                  "peopleNum": "3"
              }];
              //请求方式	get
-             //请求字段	123.206.204.163:2333/goCar/historicalOrders
+             //请求字段	clayz.top/goCar/historicalOrders
              //历史订单
              historicalOrders = [{
                  "time": "12:20",

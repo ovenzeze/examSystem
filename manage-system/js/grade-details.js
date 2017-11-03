@@ -48,7 +48,7 @@ function  makeTable() {
     $.ajax({
         type: "get",
         dataType: "json",
-        url: "http://123.206.204.163:2333/exam/gradeDetails",
+        url: "http://clayz.top/exam/gradeDetails",
         success: function (gradeDetails) {
             for(var i in gradeDetails){
 				$('#table1').append('<tr><td>' + gradeDetails[i]['studentID'] 

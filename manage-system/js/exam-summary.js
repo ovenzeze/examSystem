@@ -101,7 +101,7 @@ $('.which-class')[i].innerHTML.replace(re,function($0,$1,$2){
 $(function(){
 				$.ajax({
 					type:'get',
-					url:"http://123.206.204.163:2333/exam/classInfor/",
+					url:"http://clayz.top/exam/classInfor/",
 					scriptCharset:'utf-8',
 					async:true,
 					dataType:"json",

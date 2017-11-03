@@ -165,7 +165,7 @@ function manageTabke(manageInfo){
 $(document).ready(function(){
 		$.ajax({
 			type:"get",
-			url:"http://123.206.204.163:2333/exam/superManage",
+			url:"http://clayz.top/exam/superManage",
 			scriptCharset:"utf-8",
 			async:true,
 			success:function(result){

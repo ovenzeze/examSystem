@@ -38,7 +38,7 @@ function makeList(examInfo){
 $(document).ready(function(){
 		$.ajax({
 			type:"get",
-			url:"http://123.206.204.163:2333/exam/examManage",
+			url:"http://clayz.top/exam/examManage",
 			scriptCharset:"utf-8",
 			async:true,
 			success:function(result){

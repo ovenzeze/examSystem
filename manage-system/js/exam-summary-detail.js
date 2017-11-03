@@ -106,7 +106,7 @@
 $(function(){
 				$.ajax({
 					type:'get',
-					url:"http://123.206.204.163:2333/exam/examGradeDetails/",
+					url:"http://clayz.top/exam/examGradeDetails/",
 					scriptCharset:'utf-8',
 					async:true,
 					dataType:"json",
